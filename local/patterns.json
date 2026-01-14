@@ -1,0 +1,223 @@
+{
+  "greetings": {
+    "patterns": [
+      "\\b(hello|hi|hey|greetings|howdy|hola)\\b",
+      "good morning",
+      "good afternoon",
+      "good evening"
+    ],
+    "responses": [
+      "Hello! How can I help you today?",
+      "Hi there! What can I do for you?",
+      "Hey! How's it going?",
+      "Greetings! What brings you here?"
+    ],
+    "priority": 10
+  },
+  "farewell": {
+    "patterns": [
+      "\\b(bye|goodbye|see you|farewell|take care)\\b"
+    ],
+    "responses": [
+      "Goodbye! Have a great day!",
+      "See you later! Take care!",
+      "Bye! Come back anytime!",
+      "Farewell! It was nice chatting with you!"
+    ],
+    "priority": 10
+  },
+  "gratitude": {
+    "patterns": [
+      "\\b(thank|thanks|thx|appreciate|grateful)\\b"
+    ],
+    "responses": [
+      "You're welcome!",
+      "Happy to help!",
+      "Anytime!",
+      "Glad I could assist!",
+      "My pleasure!"
+    ],
+    "priority": 8
+  },
+  "status": {
+    "patterns": [
+      "\\b(how are you|how do you do|whats up|wassup|hows it going)\\b"
+    ],
+    "responses": [
+      "I'm doing great! How about you?",
+      "I'm here and ready to help!",
+      "All systems operational! What can I do for you?",
+      "Doing well, thanks for asking!"
+    ],
+    "priority": 7
+  },
+  "confusion": {
+    "patterns": [
+      "\\b(i am confused|this is confusing|i don't understand|doesn't make sense)\\b",
+      "can you explain again",
+      "i'm lost"
+    ],
+    "responses": [
+      "No worries — let's slow it down and break it into smaller steps.",
+      "Alright, let's rewind and explain this from the basics.",
+      "Got it. I'll explain it in a simpler way."
+    ],
+    "priority": 7
+  },
+  "clarification_request": {
+    "patterns": [
+      "\\b(what do you mean|can you clarify|clarify that|be more specific)\\b"
+    ],
+    "responses": [
+      "Sure — here's what I meant in clearer terms.",
+      "Let me clarify that point more precisely.",
+      "Good catch. Here's a clearer explanation."
+    ],
+    "priority": 6
+  },
+  "thinking_pause": {
+    "patterns": [
+      "\\b(wait|hold on|give me a second|one moment)\\b"
+    ],
+    "responses": [
+      "Alright — take your time.",
+      "No rush. I'm here when you're ready.",
+      "Paused. Continue when ready."
+    ],
+    "priority": 4
+  },
+  "decision_support": {
+    "patterns": [
+      "\\b(help me decide|what should i choose|which is better|compare options)\\b",
+      "i can't decide"
+    ],
+    "responses": [
+      "Let's compare the options logically and see which fits your goal.",
+      "Tell me the choices and your priority — speed, cost, or simplicity.",
+      "We can weigh pros and cons step by step."
+    ],
+    "priority": 8
+  },
+  "learning_mode": {
+    "patterns": [
+      "\\b(teach me|i want to learn|explain from scratch|learn step by step)\\b"
+    ],
+    "responses": [
+      "Alright — we'll treat this like a lesson and build it layer by layer.",
+      "We'll start from fundamentals and move upward.",
+      "Learning mode on. Basics first, complexity later."
+    ],
+    "priority": 8
+  },
+  "example_request": {
+    "patterns": [
+      "\\b(show an example|give an example|example please|with example)\\b"
+    ],
+    "responses": [
+      "Sure — here's a concrete example.",
+      "An example will make this clearer. Let's look at one.",
+      "I'll demonstrate with a simple example."
+    ],
+    "priority": 7
+  },
+  "definition_request": {
+    "patterns": [
+      "\\b(define|definition of|what is meant by|meaning of)\\b"
+    ],
+    "responses": [
+      "Here's a clear definition in simple terms.",
+      "Let me define that precisely.",
+      "In short, it means this."
+    ],
+    "priority": 7
+  },
+  "step_by_step": {
+    "patterns": [
+      "\\b(step by step|steps only|one step at a time|procedure)\\b"
+    ],
+    "responses": [
+      "Alright — step one first, nothing else.",
+      "We'll go sequentially, no skipping steps.",
+      "Let's do this one step at a time."
+    ],
+    "priority": 7
+  },
+  "summarization": {
+    "patterns": [
+      "\\b(summarize|summary|short version|tl;dr)\\b"
+    ],
+    "responses": [
+      "Here's the short version.",
+      "I'll condense this to the key points.",
+      "Summary coming up."
+    ],
+    "priority": 6
+  },
+  "depth_control": {
+    "patterns": [
+      "\\b(go deeper|more detail|in depth|technical explanation)\\b"
+    ],
+    "responses": [
+      "Alright — switching to a deeper, more technical explanation.",
+      "Let's dig into the underlying mechanics.",
+      "We'll go beneath the surface now."
+    ],
+    "priority": 6
+  },
+  "error_acknowledgement": {
+    "patterns": [
+      "\\b(that's wrong|you are wrong|mistake|incorrect)\\b"
+    ],
+    "responses": [
+      "Thanks for pointing that out — let's correct it.",
+      "You're right to question that. Here's the corrected version.",
+      "Good catch. Let's fix it properly."
+    ],
+    "priority": 6
+  },
+  "confidence_check": {
+    "patterns": [
+      "\\b(are you sure|is this correct|can i trust this|reliable)\\b"
+    ],
+    "responses": [
+      "Based on known information, yes — but we can double-check.",
+      "This is accurate to the best of current knowledge.",
+      "If you'd like, we can verify it from first principles."
+    ],
+    "priority": 6
+  },
+  "task_completion": {
+    "patterns": [
+      "\\b(done|finished|completed|that's all)\\b"
+    ],
+    "responses": [
+      "Alright — task noted as complete.",
+      "Done. Let me know what you'd like to tackle next.",
+      "Completion acknowledged."
+    ],
+    "priority": 5
+  },
+  "user_focus": {
+    "patterns": [
+      "\\b(remember this|note this|keep this in mind)\\b"
+    ],
+    "responses": [
+      "Understood — noted for this conversation.",
+      "I'll keep that in mind as we continue.",
+      "Acknowledged."
+    ],
+    "priority": 5
+  },
+  "intent_switch": {
+    "patterns": [
+      "\\b(change topic|new topic|different question|switch topic)\\b"
+    ],
+    "responses": [
+      "Alright — new topic. Go ahead.",
+      "Topic switched. What's next?",
+      "We can reset and start fresh."
+    ],
+    "priority": 5
+  }
+}
+

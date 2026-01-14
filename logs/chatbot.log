@@ -1,0 +1,101 @@
+2026-01-14 20:17:23,657 - HybridChatbot - INFO - Initializing chatbot...
+2026-01-14 20:17:23,659 - HybridChatbot - INFO - Gemini API initialized
+2026-01-14 20:17:23,660 - HybridChatbot - INFO - No previous conversation history found
+2026-01-14 20:17:23,661 - HybridChatbot - INFO - Chatbot initialized successfully
+2026-01-14 20:17:50,308 - HybridChatbot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 20:18:04,699 - HybridChatbot - INFO - AI response generated
+2026-01-14 20:21:54,280 - HybridChatbot - INFO - Initializing chatbot...
+2026-01-14 20:21:54,280 - HybridChatbot - INFO - Gemini API initialized
+2026-01-14 20:21:54,295 - HybridChatbot - INFO - Loaded 2 conversations
+2026-01-14 20:21:54,295 - HybridChatbot - INFO - Chatbot initialized successfully
+2026-01-14 20:22:28,344 - HybridChatbot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 20:22:38,242 - HybridChatbot - INFO - AI response generated
+2026-01-14 20:23:02,111 - HybridChatbot - INFO - AI response generated
+2026-01-14 20:23:09,717 - HybridChatbot - INFO - Local match: status (confidence: 1.00)
+2026-01-14 20:23:24,656 - HybridChatbot - INFO - AI response generated
+2026-01-14 20:23:36,111 - HybridChatbot - INFO - Initializing chatbot...
+2026-01-14 20:23:36,112 - HybridChatbot - INFO - Gemini API initialized
+2026-01-14 20:23:36,137 - HybridChatbot - INFO - Loaded 7 conversations
+2026-01-14 20:23:36,139 - HybridChatbot - INFO - Chatbot initialized successfully
+2026-01-14 20:23:36,152 - HybridChatbot - INFO - Shutting down chatbot...
+2026-01-14 20:23:36,154 - HybridChatbot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 0.047466, 'cache_size': 0, 'history_length': 7}
+2026-01-14 20:23:36,155 - HybridChatbot - INFO - Chatbot shutdown complete
+2026-01-14 20:27:07,494 - HybridChatbot - INFO - Shutting down chatbot...
+2026-01-14 20:27:07,497 - HybridChatbot - INFO - Session stats: {'total_queries': 5, 'local_responses': 2, 'ai_responses': 3, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 313.218168, 'cache_size': 5, 'history_length': 7}
+2026-01-14 20:27:07,499 - HybridChatbot - INFO - Chatbot shutdown complete
+2026-01-14 20:54:32,245 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 20:54:32,247 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 20:54:32,249 - AmmaarBhaiChatBot - INFO - Loaded 7 conversations
+2026-01-14 20:54:32,250 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 20:54:32,256 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 20:54:32,259 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 0.016037, 'cache_size': 0, 'history_length': 7}
+2026-01-14 20:54:32,260 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 20:58:07,005 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 20:58:07,006 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 20:58:07,007 - AmmaarBhaiChatBot - INFO - Loaded 7 conversations
+2026-01-14 20:58:07,008 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 20:58:44,299 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 20:58:44,302 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 37.298161, 'cache_size': 0, 'history_length': 7}
+2026-01-14 20:58:44,302 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 20:59:31,188 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 20:59:31,188 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 20:59:31,190 - AmmaarBhaiChatBot - INFO - Loaded 7 conversations
+2026-01-14 20:59:31,190 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 21:00:12,451 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 21:00:12,453 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 41.266354, 'cache_size': 0, 'history_length': 7}
+2026-01-14 21:00:12,454 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 21:03:58,059 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 21:04:00,307 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 21:04:00,329 - AmmaarBhaiChatBot - INFO - Loaded 7 conversations
+2026-01-14 21:04:00,330 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 21:05:23,541 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 21:05:42,535 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 21:05:49,358 - AmmaarBhaiChatBot - INFO - Local match: status (confidence: 1.00)
+2026-01-14 21:05:56,571 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 21:27:32,839 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 21:27:32,841 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 4, 'local_responses': 2, 'ai_responses': 2, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 1414.782913, 'cache_size': 4, 'history_length': 11}
+2026-01-14 21:27:32,842 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 21:31:01,480 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 21:31:04,763 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 21:31:04,791 - AmmaarBhaiChatBot - INFO - Loaded 11 conversations
+2026-01-14 21:31:04,792 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 21:35:06,468 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 21:35:20,093 - AmmaarBhaiChatBot - ERROR - Error processing input: No supported generate interface available on GenAI client
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\new one\core\chatbot.py", line 115, in process_input
+    response = self.gemini_client.generate_response(
+        user_input,
+        context=context
+    )
+  File "C:\Users\muaza\Desktop\new one\ai\gemini_client.py", line 118, in generate_response
+    raise RuntimeError('No supported generate interface available on GenAI client')
+RuntimeError: No supported generate interface available on GenAI client
+2026-01-14 21:37:34,312 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 21:37:34,315 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 2, 'local_responses': 1, 'ai_responses': 1, 'cache_hits': 0, 'errors': 1, 'uptime_seconds': 392.836031, 'cache_size': 1, 'history_length': 12}
+2026-01-14 21:37:34,315 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 21:38:09,387 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 21:38:11,351 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 21:38:11,371 - AmmaarBhaiChatBot - INFO - Loaded 12 conversations
+2026-01-14 21:38:11,371 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 21:38:36,642 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 21:38:40,891 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 21:39:28,046 - AmmaarBhaiChatBot - ERROR - GenAI generation failed
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\new one\ai\gemini_client.py", line 120, in generate_response
+    raise RuntimeError('No supported generate interface available on GenAI client')
+RuntimeError: No supported generate interface available on GenAI client
+2026-01-14 21:39:28,055 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 21:42:09,770 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 21:42:09,774 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 3, 'local_responses': 2, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 240.388097, 'cache_size': 3, 'history_length': 15}
+2026-01-14 21:42:09,775 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 21:46:56,728 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 21:47:00,593 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 21:47:00,631 - AmmaarBhaiChatBot - INFO - Loaded 15 conversations
+2026-01-14 21:47:00,632 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 21:47:10,445 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 21:47:16,019 - AmmaarBhaiChatBot - ERROR - GenAI generation failed
+Traceback (most recent call last):
+  File "c:\Users\muaza\Desktop\AIMA-chatbot\ai\gemini_client.py", line 120, in generate_response
+    raise RuntimeError('No supported generate interface available on GenAI client')
+RuntimeError: No supported generate interface available on GenAI client
+2026-01-14 21:47:16,025 - AmmaarBhaiChatBot - INFO - AI response generated

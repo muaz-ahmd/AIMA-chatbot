@@ -1,0 +1,104 @@
+[
+  {
+    "timestamp": "2026-01-14T20:17:50.284079",
+    "user": "hey",
+    "bot": "Greetings! What brings you here?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T20:18:04.696759",
+    "user": "your love",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T20:22:28.341588",
+    "user": "hello",
+    "bot": "Greetings! What brings you here?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T20:22:38.241150",
+    "user": "i need help",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T20:23:02.109479",
+    "user": "setname",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T20:23:09.714340",
+    "user": "whats up",
+    "bot": "All systems operational! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T20:23:24.652304",
+    "user": "whats 1+1",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T21:05:23.539611",
+    "user": "heya",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T21:05:42.534233",
+    "user": "hey",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:05:49.355392",
+    "user": "how are you",
+    "bot": "I'm doing great! How about you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:05:56.568238",
+    "user": "im fine",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T21:35:06.464943",
+    "user": "hey",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:38:36.637859",
+    "user": "hello",
+    "bot": "Hey! How's it going?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:38:40.885062",
+    "user": "good",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:39:28.050004",
+    "user": "whats on in india",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-14T21:47:10.441782",
+    "user": "hey",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-14T21:47:16.022173",
+    "user": "heyyy",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  }
+]
