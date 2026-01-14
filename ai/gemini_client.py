@@ -108,11 +108,13 @@ class GeminiClient:
 
     def _build_prompt(self, prompt: str, context: Optional[List[str]]) -> str:
         """Build prompt with context"""
+        system_part = f"System: {self.config.system_instruction}\n\n"
+        
         if not context or not self.config.enable_context:
-            return prompt
+            return f"{system_part}User: {prompt}"
 
         context_str = "\n".join(context[-self.config.context_window_size:])
-        return f"Context:\n{context_str}\n\nUser: {prompt}"
+        return f"{system_part}Context:\n{context_str}\n\nUser: {prompt}"
 
     def _check_rate_limit(self) -> bool:
         """Check rate limiting"""

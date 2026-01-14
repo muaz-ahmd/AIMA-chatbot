@@ -25,6 +25,11 @@ class ChatbotConfig:
     response_temperature: float = 0.7
     enable_local_priority: bool = True
     fallback_to_ai: bool = True
+    system_instruction: str = (
+        "You are a helpful CLI assistant. Provide direct, concise answers. "
+        "Do not use markdown (no bold, italic, code blocks). Eliminate conversational filler. "
+        "Separate your response into short lines (max 80 chars) to fit the terminal window."
+    )
     
     # Conversation Management
     max_history_length: int = 50

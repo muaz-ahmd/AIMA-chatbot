@@ -107,3 +107,71 @@ RuntimeError: No supported generate interface available on GenAI client
 2026-01-14 22:44:00,863 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
 2026-01-14 22:44:17,149 - AmmaarBhaiChatBot - INFO - AI response generated
 2026-01-14 22:44:52,866 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 23:14:21,986 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 23:14:23,346 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 23:14:23,347 - AmmaarBhaiChatBot - INFO - Loaded 21 conversations
+2026-01-14 23:14:23,347 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 23:17:01,750 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 23:17:01,753 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 159.76726, 'cache_size': 0, 'history_length': 21}
+2026-01-14 23:17:01,753 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 23:17:12,736 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 23:17:13,916 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 23:17:13,917 - AmmaarBhaiChatBot - INFO - Loaded 21 conversations
+2026-01-14 23:17:13,918 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 23:17:47,511 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 23:17:59,157 - AmmaarBhaiChatBot - ERROR - GenAI generation failed
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\ai\gemini_client.py", line 45, in generate_response
+    response = self.client.models.generate_content(
+        model=self.config.gemini_model,  # e.g. "gemini-1.5-flash"
+        contents=full_prompt
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 5215, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 3997, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1375, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1211, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1188, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-01-14 23:17:59,267 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 23:20:21,689 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-14 23:20:21,692 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 2, 'local_responses': 1, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 188.95674, 'cache_size': 2, 'history_length': 23}
+2026-01-14 23:20:21,692 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-14 23:20:29,051 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 23:20:30,516 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 23:20:30,517 - AmmaarBhaiChatBot - INFO - Loaded 23 conversations
+2026-01-14 23:20:30,517 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 23:20:38,497 - AmmaarBhaiChatBot - INFO - Local match: status (confidence: 1.00)
+2026-01-14 23:20:55,904 - AmmaarBhaiChatBot - INFO - AI response generated
