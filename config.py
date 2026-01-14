@@ -9,7 +9,7 @@ class ChatbotConfig:
     
     # API Configuration
     gemini_api_key: Optional[str] = field(default_factory=lambda: os.environ.get("GEMINI_API_KEY"))
-    gemini_model: str = "gemini-pro"
+    gemini_model: str = "gemini-2.5-flash"
     api_timeout: int = 30
     max_retries: int = 3
     retry_delay: float = 1.0

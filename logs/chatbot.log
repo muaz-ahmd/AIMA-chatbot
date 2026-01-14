@@ -99,3 +99,11 @@ Traceback (most recent call last):
     raise RuntimeError('No supported generate interface available on GenAI client')
 RuntimeError: No supported generate interface available on GenAI client
 2026-01-14 21:47:16,025 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 22:43:34,010 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-14 22:43:35,277 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-14 22:43:35,279 - AmmaarBhaiChatBot - INFO - Loaded 17 conversations
+2026-01-14 22:43:35,280 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-14 22:43:50,201 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 22:44:00,863 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-14 22:44:17,149 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-14 22:44:52,866 - AmmaarBhaiChatBot - INFO - AI response generated
