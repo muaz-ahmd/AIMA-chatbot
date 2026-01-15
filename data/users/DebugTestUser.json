@@ -1,0 +1,8 @@
+{
+  "username": "DebugTestUser",
+  "created_at": null,
+  "facts": {
+    "test_key": "test_value"
+  },
+  "preferences": {}
+}

@@ -1,170 +1,302 @@
 [
   {
-    "timestamp": "2026-01-14T20:17:50.284079",
+    "timestamp": "2026-01-15T01:16:09.616058",
+    "user": "God",
+    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:19:09.535845",
     "user": "hey",
-    "bot": "Greetings! What brings you here?",
+    "bot": "Hello! How can I help you today?",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T20:18:04.696759",
-    "user": "your love",
+    "timestamp": "2026-01-15T01:19:15.500184",
+    "user": "help me",
     "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T20:22:28.341588",
-    "user": "hello",
-    "bot": "Greetings! What brings you here?",
+    "timestamp": "2026-01-15T01:20:22.223175",
+    "user": "Who is God",
+    "bot": "I don't have a response for this.",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T20:22:38.241150",
-    "user": "i need help",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T20:23:02.109479",
-    "user": "setname",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T20:23:09.714340",
-    "user": "whats up",
-    "bot": "All systems operational! What can I do for you?",
+    "timestamp": "2026-01-15T01:20:28.544522",
+    "user": "Who is Allah",
+    "bot": "The Lord of the Universe",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T20:23:24.652304",
-    "user": "whats 1+1",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T01:20:50.795365",
+    "user": "Whats happening in india today",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T21:05:23.539611",
-    "user": "heya",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T01:23:04.433295",
+    "user": "Whats going on in Venezuela",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T21:05:42.534233",
-    "user": "hey",
+    "timestamp": "2026-01-15T01:23:54.380636",
+    "user": "Whats happening in the US",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:40:29.529790",
+    "user": "When was Jamia Millia Islamia founded",
+    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:40:50.744237",
+    "user": "Who is the VC of JMI",
+    "bot": "The Visitor of Jamia Millia Islamia is the President of India; the university has a Chancellor and Vice-Chancellor as per statutory structure (these posts have changed holders over time). The current VC is Prof. Mazhar Asif.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:41:18.427507",
+    "user": "Whats the ranking of JMI",
+    "bot": "Jamia Millia Islamia received the highest grade 'A++' from the National Assessment and Accreditation Council (NAAC) in its second cycle of assessment (2021).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:41:32.384909",
+    "user": "Who is Allah",
+    "bot": "The Lord of the Universe",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:43:41.964805",
+    "user": "Who is Muhammed SAW",
+    "bot": "Jamia Millia Islamia became a Central University by an Act of Parliament in December 1988 (The Jamia Millia Islamia Act, 1988).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:44:07.469571",
+    "user": "Delhi University",
+    "bot": "Official contact: Jamia Millia Islamia, Jamia Nagar, New Delhi-110025, phone numbers and contact details available on the university website.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:47:06.549873",
+    "user": "Whats happening in India today",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:47:26.584510",
+    "user": "Whats happening in Japan",
+    "bot": "Jamia Millia Islamia became a Central University by an Act of Parliament in December 1988 (The Jamia Millia Islamia Act, 1988).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:49:21.370910",
+    "user": "who is muhammed saw",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:49:37.647445",
+    "user": "where is japan situated",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:49:50.550052",
+    "user": "Where is Delhi University",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:49:59.868049",
+    "user": "Where is JMI",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:50:13.470677",
+    "user": "When was JMI founded",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:50:32.504236",
+    "user": "When was Jamia Millia Islamia founded",
+    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:52:49.715097",
+    "user": "Who owns AIMA Chatbot",
+    "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T01:53:10.232484",
+    "user": "Who is the owner of AIMA Chatbot",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:53:20.059556",
+    "user": "Who owns AIMA",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T01:54:05.530293",
+    "user": "Who owns AIMA",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T12:33:42.762587",
+    "user": "Hey",
     "bot": "Hi there! What can I do for you?",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:05:49.355392",
-    "user": "how are you",
-    "bot": "I'm doing great! How about you?",
+    "timestamp": "2026-01-15T12:33:53.558035",
+    "user": "How are you",
+    "bot": "All systems operational! What can I do for you?",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:05:56.568238",
-    "user": "im fine",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T12:34:09.224534",
+    "user": "Help me",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T21:35:06.464943",
-    "user": "hey",
-    "bot": "Hello! How can I help you today?",
+    "timestamp": "2026-01-15T12:34:20.074765",
+    "user": "Who is Allah",
+    "bot": "The Lord of the Universe",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:38:36.637859",
-    "user": "hello",
-    "bot": "Hey! How's it going?",
+    "timestamp": "2026-01-15T12:34:41.170353",
+    "user": "When was Jamia Millia Islamia established",
+    "bot": "Jamia Millia Islamia was established with the goal of providing a national (millia) university and promoting education for social upliftment, emphasizing secular and inclusive education.",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:38:40.885062",
-    "user": "good",
-    "bot": "Hello! How can I help you today?",
+    "timestamp": "2026-01-15T12:35:08.618784",
+    "user": "Who founded Jamia Millia Islamia",
+    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:39:28.050004",
-    "user": "whats on in india",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T12:35:28.016874",
+    "user": "Who is Muhammed",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T21:47:10.441782",
-    "user": "hey",
-    "bot": "Hello! How can I help you today?",
+    "timestamp": "2026-01-15T14:05:49.039338",
+    "user": "Hey",
+    "bot": "Hi there! What can I do for you?",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T21:47:16.022173",
-    "user": "heyyy",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T22:43:50.196627",
-    "user": "heya",
-    "bot": "Bot: I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T22:44:00.856450",
-    "user": "hello gemini",
-    "bot": "Hello! How can I help you today?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-14T22:44:17.147857",
-    "user": "gemini help me",
-    "bot": "Hello! How can I help you today?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T22:44:52.860921",
-    "user": "please give me some insights on the top news today",
-    "bot": "Okay, I can certainly give you some insights into the major news trends and stories that have been dominating headlines recently. While I don't have real-time access to *minute-by-minute* updates, I can provide a good overview of the key issues that are likely still developing or having ongoing impact.\n\nHere are some top news insights across different categories:\n\n---\n\n### **1. Geopolitical Conflicts & Tensions**\n\n*   **Ukraine War Continues:**\n    *   **What's Happening:** Intense fighting continues along the front lines, with both sides making limited gains. Russia has been targeting Ukrainian energy infrastructure and cities with drones and missiles. International aid packages, particularly from the US and EU, remain a critical point of discussion and delivery.\n    *   **Insights:** The conflict appears to be in a grinding stalemate, with neither side achieving a decisive breakthrough. The long-term sustainability of Western support for Ukraine is a constant question, directly impacting Ukraine's ability to defend itself and potentially launch counter-offensives. The war continues to reshape global alliances and energy markets.\n*   **Middle East Crisis (Israel-Hamas):**\n    *   **What's Happening:** The humanitarian crisis in Gaza remains severe, with ongoing Israeli military operations and a critical shortage of food, water, and medicine. Ceasefire negotiations continue to be complex and often falter. Regional tensions are high, with skirmishes involving Hezbollah on the Israel-Lebanon border and Houthi attacks on shipping in the Red Sea.\n    *   **Insights:** The conflict has far-reaching humanitarian and diplomatic consequences. The difficulty in securing a lasting ceasefire and ensuring aid delivery highlights deep-seated political divisions. The regional ripple effects, including threats to global trade routes, underscore the instability and the urgency of de-escalation efforts.\n*   **China-US Relations:**\n    *   **What's Happening:** Relations remain a mix of strategic competition and cautious engagement. Discussions often revolve around trade, technology (especially AI and semiconductors), Taiwan, and human rights.\n    *   **Insights:** The relationship is a defining geopolitical dynamic of our era. Both countries are navigating a complex balance of rivalry and interdependence. While there's a desire to prevent outright conflict, particularly over Taiwan, economic and ideological competition continues to drive much of their interaction.\n\n---\n\n### **2. Global Economy & Finance**\n\n*   **Inflation & Interest Rates:**\n    *   **What's Happening:** Central banks (like the US Federal Reserve, European Central Bank) are carefully weighing inflation data and economic growth figures as they consider when and how to cut interest rates. While inflation has generally cooled, some sectors are proving \"stickier.\"\n    *   **Insights:** The global economy is at a critical juncture. The balancing act for central banks is to tame inflation without triggering a recession. Market expectations for rate cuts frequently shift based on new economic data, leading to volatility. The cost of living remains a significant concern for many households worldwide.\n*   **Global Supply Chains:**\n    *   **What's Happening:** While some of the pandemic-era bottlenecks have eased, geopolitical events (like Red Sea disruptions) and trade tensions continue to test the resilience of global supply chains.\n    *   **Insights:** Businesses are increasingly diversifying their supply chains and \"near-shoring\" or \"friend-shoring\" production to reduce risks. This is a long-term trend that could reshape global manufacturing and trade flows.\n\n---\n\n### **3. Technology & Innovation**\n\n*   **Artificial Intelligence (AI) Development:**\n    *   **What's Happening:** The rapid pace of AI innovation continues, with major tech companies announcing new models, features, and applications. There's also growing discussion around AI regulation, ethics, and its potential impact on jobs and society.\n    *   **Insights:** AI is transformative, fundamentally changing how we interact with technology and how businesses operate. The \"AI race\" is intense, driving significant investment and research. However, concerns about misinformation, bias, security, and the concentration of power are also escalating, prompting calls for careful governance.\n\n---\n\n### **4. Climate Change & Environment**\n\n*   **Extreme Weather Events:**\n    *   **What's Happening:** Many regions globally are experiencing more frequent and intense extreme weather events, including heatwaves, droughts, floods, and severe storms.\n    *   **Insights:** These events are increasingly being linked to climate change, highlighting the urgent need for both mitigation (reducing emissions) and adaptation (preparing for impacts). The economic and social costs of these events are substantial and growing.\n*   **Energy Transition:**\n    *   **What's Happening:** Investment in renewable energy continues to grow, but the transition away from fossil fuels faces challenges related to infrastructure, policy, and energy security concerns in some regions.\n    *   **Insights:** The global energy landscape is undergoing a significant transformation, driven by climate goals and technological advancements. However, the path is not smooth, requiring complex policy decisions, substantial investment, and international cooperation.\n\n---\n\n**In Summary:** The world continues to grapple with a mix of persistent geopolitical conflicts, economic uncertainties driven by inflation and monetary policy, rapid technological advancement with its own set of opportunities and challenges, and the ongoing impacts of climate change. Each of these areas is interconnected, influencing the others in complex ways.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T23:17:47.503888",
-    "user": "hey gemini, whats in highlight today",
-    "bot": "Hey! How's it going?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-14T23:17:59.265133",
-    "user": "whats in the headline for today",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-14T23:20:38.493558",
-    "user": "heya gemini whats up",
+    "timestamp": "2026-01-15T14:06:01.074506",
+    "user": "Whats up",
     "bot": "Doing well, thanks for asking!",
     "source": "LOCAL"
   },
   {
-    "timestamp": "2026-01-14T23:20:55.902601",
-    "user": "whats in the headline today",
-    "bot": "Here are today's ongoing highlights:\n\nGeopolitical tensions persist globally.\nConflicts in Ukraine and the Middle East continue.\nCentral banks eye inflation and interest rates.\nAI development surges with calls for regulation.\nExtreme weather events highlight climate concerns.",
+    "timestamp": "2026-01-15T14:06:09.728112",
+    "user": "Hows the day",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T23:37:17.462406",
-    "user": "something particular in india?",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T14:06:27.851334",
+    "user": "Who are you?",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T23:43:18.797647",
-    "user": "whats the best chatbot",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T14:06:38.846846",
+    "user": "I am Muaz",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
   },
   {
-    "timestamp": "2026-01-14T23:57:30.277682",
-    "user": "heya chattybot whats going on",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
+    "timestamp": "2026-01-15T14:06:46.462403",
+    "user": "Hello!",
+    "bot": "Hey! How's it going?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:07:01.966680",
+    "user": "Where is Jamia Millia Islamia",
+    "bot": "The Vice Chancellor of Jamia Millia Islamia is the President of India; the university has a Chancellor and Vice-Chancellor as per statutory structure (these posts have changed holders over time). The current VC is Prof. Mazhar Asif.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:07:29.722931",
+    "user": "Who is God",
+    "bot": "Allah",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:07:35.799035",
+    "user": "Who is God?",
+    "bot": "Allah",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:07:52.403223",
+    "user": "Who is Allah??",
+    "bot": "The Lord of the Universe",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:40:51.408906",
+    "user": "Hello, whats up",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:41:01.667715",
+    "user": "Hi, help me",
+    "bot": "Greetings! What brings you here?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:41:12.069459",
+    "user": "help me",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
     "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T14:41:25.532602",
+    "user": "My name is Muaz",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T14:42:07.313783",
+    "user": "Whats up",
+    "bot": "Doing well, thanks for asking!",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T14:42:14.873898",
+    "user": "Great",
+    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T15:26:28.618600",
+    "user": "Who owns aima chatbot",
+    "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
+    "source": "LOCAL"
   }
 ]

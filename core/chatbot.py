@@ -4,6 +4,8 @@ from datetime import datetime
 
 from config import ChatbotConfig
 from core.input_parser import InputParser, ParsedInput
+from core.intent_splitter import IntentSplitter
+from core.user_manager import UserManager
 from local.pattern_matcher import PatternMatcher
 from ai.gemini_client import GeminiClient
 from utils.logger import ChatbotLogger
@@ -13,9 +15,11 @@ from utils.cache import ResponseCache
 class HybridChatbot:
     """Main chatbot orchestrator"""
     
-    def __init__(self, config: ChatbotConfig):
+    def __init__(self, config: ChatbotConfig, user_override: Optional[str] = None):
         self.config = config
         self.parser = InputParser(config)
+        self.splitter = IntentSplitter()
+        self.user_manager = UserManager(config.base_dir, user_override)
         self.pattern_matcher = PatternMatcher(
             config,
             config.patterns_file
@@ -57,8 +61,8 @@ class HybridChatbot:
         # Load conversation history
         if self.config.save_conversations and not self.config.clear_history_on_restart:
             self._load_history()
-        
-        self.logger.info("Chatbot initialized successfully")
+            
+        self.logger.info(f"Chatbot initialized for user: {self.user_manager.username}")
         return True
     
     def process_input(self, user_input: str) -> str:
@@ -85,15 +89,41 @@ class HybridChatbot:
                     self.logger.debug("Cache hit")
                     return self._format_response(cached, "CACHED")
             
-            # Try local pattern matching first
+            # Try local pattern matching first (Standard)
             if self.config.enable_local_priority:
+                # 1. Try Multi-Intent Split first
+                # Check if we can answer ALL segments locally.
+                segments = self.splitter.split(user_input)
+                if len(segments) > 1:
+                    combined_responses = []
+                    all_segments_matched = True
+                    
+                    for seg in segments:
+                        # We need to parse each segment individually for the matcher
+                        seg_parsed = self.parser.parse(seg)
+                        match_result = self.pattern_matcher.match(seg_parsed)
+                        
+                        if match_result.matched and match_result.confidence >= self.config.pattern_match_threshold:
+                            combined_responses.append(match_result.response)
+                        else:
+                            all_segments_matched = False
+                            break
+                    
+                    if all_segments_matched and combined_responses:
+                        final_response = " ".join(combined_responses)
+                        self.stats['local_responses'] += 1
+                        self._add_to_history(user_input, final_response, "LOCAL")
+                        self.logger.info(f"Multi-intent local match: {len(segments)} segments")
+                        return self._format_response(final_response, "LOCAL", "multi")
+
+                # 2. Try Standard Full Match
                 match_result = self.pattern_matcher.match(parsed)
                 
                 if match_result.matched and match_result.confidence >= self.config.pattern_match_threshold:
                     self.stats['local_responses'] += 1
                     response = match_result.response
                     
-                    # Cache response
+                    # Cache response (local responses are safe to cache)
                     if self.config.enable_response_cache:
                         self.cache.set(parsed.normalized_text, response)
                     
@@ -111,16 +141,57 @@ class HybridChatbot:
                 context = None
                 if self.config.enable_context:
                     context = self._get_context()
-                
+                    
+                # Inject User Profile Context
+                user_context = self.user_manager.get_context_string()
+                if user_context:
+                    # We can prepend this to the prompt or the system instruction. 
+                    # Prepending to system instruction via prompt is cleaner if client supports it,
+                    # but here we pass context as list. Let's prepend to the prompt input for now.
+                    # Or better: Add it to the context list as a system note.
+                    if context is None:
+                        context = []
+                    context.append(f"System Note: {user_context}")
+
                 response = self.gemini_client.generate_response(
                     user_input,
                     context=context
                 )
                 
-                # Cache response
+                # Cache response (only if not an error)
                 if self.config.enable_response_cache:
-                    self.cache.set(parsed.normalized_text, response)
+                    # Don't cache error responses
+                    error_keywords = [
+                        "error", "sorry", "unable", "cannot", "failed", "404", "503",
+                        "api limit", "server busy", "config error", "quota", "resource exhausted"
+                    ]
+                    is_error = any(k in response.lower() for k in error_keywords)
+                    if not is_error:
+                        self.cache.set(parsed.normalized_text, response)
                 
+                # Auto Learning
+                if self.config.enable_auto_learning:
+                    # Basic validation to avoid learning errors
+                    error_keywords = [
+                        "error", "sorry", "unable", "cannot", "failed", "404", "503",
+                        "api limit", "server busy", "config error", "quota"
+                    ]
+                    is_error = any(k in response.lower() for k in error_keywords)
+                    
+                    if not is_error and len(response) > 5:
+                         # normalize pattern for storage
+                         self.learn_pattern(user_input, response)
+                         self.logger.info("Auto-learned new pattern")
+
+                # Simple User Fact Extraction (Basic Logic)
+                import re
+                # "My name is X"
+                name_match = re.search(r"my name is\s+([a-zA-Z]+)", user_input, re.IGNORECASE)
+                if name_match:
+                    name = name_match.group(1)
+                    self.user_manager.set_fact("name", name)
+                    self.logger.info(f"Learned user name: {name}")
+
                 # Log conversation
                 self._add_to_history(user_input, response, "GEMINI")
                 
@@ -137,10 +208,52 @@ class HybridChatbot:
             if self.config.verbose_errors:
                 return f"Error: {str(e)}"
             return self.config.default_error_response
-        
-        finally:
-            elapsed = time.time() - start_time
-            self.logger.debug(f"Processing time: {elapsed:.3f}s")
+    
+    def learn_pattern(self, pattern: str, response: str) -> bool:
+        """Learn a new pattern and save to file"""
+        try:
+            import json
+            import os
+            import re
+            
+            # Basic sanitization
+            # Escape regex characters if it's treated as a literal string
+            clean_pattern = re.escape(pattern.strip())
+            
+            # Smart boundary handling
+            # If pattern ends with word char (a-z0-9), use \b. Else use end of string or non-word char check.
+            start_b = r"\b" if re.match(r'^\w', clean_pattern) else ""
+            end_b = r"\b" if re.search(r'\w$', clean_pattern) else ""
+            
+            regex_pattern = f"{start_b}{clean_pattern}{end_b}"
+            
+            # Load existing
+            if os.path.exists(self.config.patterns_file):
+                with open(self.config.patterns_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+            else:
+                data = {}
+
+            # Add to a unique category for proper 1-to-1 mapping
+            # This ensures we don't need a complex logic to manage a single 'learned' array
+            import uuid
+            cat_id = f"learned_{uuid.uuid4().hex[:8]}"
+            data[cat_id] = {
+                "patterns": [regex_pattern],
+                "responses": [response],
+                "priority": 9  # High priority for learned items
+            }
+            
+            with open(self.config.patterns_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+            
+            # Reload matcher
+            self.pattern_matcher.load_patterns()
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to learn pattern: {e}")
+            return False
     
     def _format_response(self, response: str, source: str, match_type: str = "") -> str:
         """Format response with source indicator"""

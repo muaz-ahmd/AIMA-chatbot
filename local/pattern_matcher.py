@@ -24,7 +24,69 @@ class PatternMatcher:
     def __init__(self, config: ChatbotConfig, patterns_file: str):
         self.config = config
         self.patterns = self._load_patterns(patterns_file)
+        self.knowledge_base = self._load_knowledge_base()
         self.match_cache = {}
+
+    def load_patterns(self):
+        """Reload patterns from file"""
+        self.patterns = self._load_patterns(self.config.patterns_file)
+        self.knowledge_base = self._load_knowledge_base()
+        self.match_cache = {}
+
+    def _load_knowledge_base(self) -> List[Dict]:
+        """Load knowledge base from JSON file"""
+        try:
+            if hasattr(self.config, 'knowledge_file'):
+                with open(self.config.knowledge_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            return []
+        except Exception as e:
+            print(f"[ERROR] Failed to load knowledge base: {e}")
+            return []
+
+    def search_knowledge(self, text: str) -> Optional[str]:
+        """Search knowledge base for a match"""
+        if not self.knowledge_base or len(text) < 3:
+            return None
+            
+        text = text.lower()
+        threshold = getattr(self.config, 'min_knowledge_score', 85)
+        
+        best_score = 0
+        best_content = None
+        
+        for entry in self.knowledge_base:
+            # 1. Tags Match (Priority) - strict partial ratio
+            # We want "VC" to match "Vice Chancellor" tag, but "Delhi University" shouldn't match "Delhi" tag easily
+            for tag in entry.get("tags", []):
+                # ratio is strict exactness, partial_ratio allows "subset"
+                # For tags, we want high relevance.
+                score = fuzz.ratio(tag.lower(), text)
+                if score >= threshold:
+                    return entry["content"] # Immediate return on high tag match
+                
+                # Check partial but with very high threshold
+                p_score = fuzz.partial_ratio(tag.lower(), text)
+                if p_score >= 95 and len(text) > 4: # Only for longer queries
+                     if p_score > best_score:
+                        best_score = p_score
+                        best_content = entry["content"]
+
+            # 2. Content Match (Wildcard)
+            # Token Set Ratio: Matches if query words appear in content
+            content_score = fuzz.token_set_ratio(entry["content"].lower(), text)
+            
+            # Penalize if query is "Delhi University" and content has "Delhi" but implies something else?
+            # Hard to do without NLP.
+            # Rely on high threshold (85).
+            
+            if content_score > best_score:
+                best_score = content_score
+                best_content = entry["content"]
+        
+        if best_score >= threshold:
+            return best_content
+        return None
     
     def _load_patterns(self, filepath: str) -> Dict:
         """Load patterns from JSON file"""
@@ -101,7 +163,7 @@ class PatternMatcher:
             match_type="none"
         )
         
-        # Try exact/regex matching first
+        # Try standard patterns first
         for name, data in self.patterns.items():
             for pattern in data.get("patterns", []):
                 if self._is_regex_pattern(pattern):
@@ -127,6 +189,19 @@ class PatternMatcher:
                         self.match_cache[text] = result
                         return result
         
+        # Try Knowledge Base Search (New Layer)
+        kb_result = self.search_knowledge(text)
+        if kb_result:
+             result = MatchResult(
+                matched=True,
+                response=kb_result,
+                pattern_name="knowledge_base",
+                confidence=0.9,
+                match_type="knowledge"
+            )
+             self.match_cache[text] = result
+             return result
+
         # Try fuzzy matching if enabled
         if self.config.use_fuzzy_matching:
             fuzzy_result = self._fuzzy_match(text)
@@ -166,4 +241,6 @@ class PatternMatcher:
     def _select_response(self, responses: List[str]) -> str:
         """Select a response from available options"""
         import random
+        if not responses:
+            return "I don't have a response for this."
         return random.choice(responses)

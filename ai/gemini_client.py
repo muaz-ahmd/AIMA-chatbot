@@ -2,7 +2,13 @@ from typing import Optional, List
 import time
 import importlib
 import logging
-from google import genai
+import importlib
+import logging
+try:
+    from google import genai
+except ImportError:
+    genai = None
+
 from config import ChatbotConfig
 
 
@@ -46,9 +52,20 @@ class GeminiClient:
                 model=self.config.gemini_model,  # e.g. "gemini-1.5-flash"
                 contents=full_prompt
             )
-            return response.text
-        except Exception:
-            logging.getLogger('AmmaarBhaiChatBot').exception("GenAI generation failed")
+            return self._extract_text(response)
+        except Exception as e:
+            err_msg = str(e).lower()
+            # Handle common API errors with friendly messages
+            if "429" in err_msg or "resource exhausted" in err_msg:
+                return "⚠️ [API Limit] You're sending requests too fast or have hit your daily quota. Please wait."
+            
+            if "503" in err_msg or "unavailable" in err_msg or "overloaded" in err_msg:
+                return "⚠️ [Server Busy] Google's AI service is overloaded right now. Please try again in a minute."
+            
+            if "404" in err_msg or "not found" in err_msg:
+                return f"⚠️ [Config Error] The model '{self.config.gemini_model}' was not found. Please check your configuration."
+
+            logging.getLogger('AmmaarBhaiChatBot').error(f"GenAI generation failed: {e}")
             return self.config.default_error_response
 
 

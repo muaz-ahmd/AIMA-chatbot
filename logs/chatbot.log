@@ -330,3 +330,273 @@ Traceback (most recent call last):
     raise ClientError(status_code, response_json, response)
 google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 30.517386932s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}
 2026-01-14 23:57:30,280 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:08:08,871 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:08:08,875 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 4251.386117, 'cache_size': 1, 'history_length': 28}
+2026-01-15 01:08:08,875 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:08:23,368 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:08:24,587 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:08:24,588 - AmmaarBhaiChatBot - INFO - Loaded 28 conversations
+2026-01-15 01:08:24,589 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:08:45,209 - AmmaarBhaiChatBot - ERROR - Failed to learn pattern: 'PatternMatcher' object has no attribute 'load_patterns'
+2026-01-15 01:08:45,210 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:08:45,212 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 21.844682, 'cache_size': 0, 'history_length': 28}
+2026-01-15 01:08:45,212 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:11:49,079 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:11:50,419 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:11:50,419 - AmmaarBhaiChatBot - INFO - Loaded 28 conversations
+2026-01-15 01:11:50,420 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:12:05,071 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:12:05,074 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 0, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 15.995931, 'cache_size': 0, 'history_length': 28}
+2026-01-15 01:12:05,075 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:13:15,865 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:13:17,093 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:13:17,094 - AmmaarBhaiChatBot - INFO - Loaded 28 conversations
+2026-01-15 01:13:17,094 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:13:41,538 - AmmaarBhaiChatBot - ERROR - Error processing input: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\core\chatbot.py", line 90, in process_input
+    match_result = self.pattern_matcher.match(parsed)
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\local\pattern_matcher.py", line 116, in match
+    response=self._select_response(data["responses"]),
+             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\local\pattern_matcher.py", line 174, in _select_response
+    return random.choice(responses)
+           ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\random.py", line 351, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2026-01-15 01:15:27,270 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:15:27,272 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 0, 'cache_hits': 0, 'errors': 1, 'uptime_seconds': 131.40809, 'cache_size': 0, 'history_length': 28}
+2026-01-15 01:15:27,273 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:15:32,508 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:15:33,781 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:15:33,790 - AmmaarBhaiChatBot - INFO - Loaded 28 conversations
+2026-01-15 01:15:33,795 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:15:50,333 - AmmaarBhaiChatBot - INFO - Local match: learned (confidence: 1.00)
+2026-01-15 01:16:09,592 - AmmaarBhaiChatBot - ERROR - GenAI generation failed
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\ai\gemini_client.py", line 45, in generate_response
+    response = self.client.models.generate_content(
+        model=self.config.gemini_model,  # e.g. "gemini-1.5-flash"
+        contents=full_prompt
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 5215, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 3997, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1375, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1211, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1188, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 51.193172273s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}
+2026-01-15 01:16:09,618 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:19:09,539 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 01:19:15,494 - AmmaarBhaiChatBot - ERROR - GenAI generation failed
+Traceback (most recent call last):
+  File "C:\Users\muaza\Desktop\AIMA-chatbot\ai\gemini_client.py", line 45, in generate_response
+    response = self.client.models.generate_content(
+        model=self.config.gemini_model,  # e.g. "gemini-1.5-flash"
+        contents=full_prompt
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 5215, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\models.py", line 3997, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1375, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1211, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\_api_client.py", line 1188, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muaza\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\genai\errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 45.037304242s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}
+2026-01-15 01:19:15,502 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:19:20,798 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:19:20,802 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 4, 'local_responses': 2, 'ai_responses': 2, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 228.294491, 'cache_size': 4, 'history_length': 32}
+2026-01-15 01:19:20,804 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:19:51,060 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:19:52,277 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:19:52,278 - AmmaarBhaiChatBot - INFO - Loaded 32 conversations
+2026-01-15 01:19:52,278 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:20:22,225 - AmmaarBhaiChatBot - INFO - Local match: learned (confidence: 1.00)
+2026-01-15 01:20:28,547 - AmmaarBhaiChatBot - INFO - Local match: learned_4c64ffba (confidence: 1.00)
+2026-01-15 01:20:50,794 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 01:20:50,797 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:23:04,432 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 01:23:04,435 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:23:40,942 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:23:40,945 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 6, 'local_responses': 2, 'ai_responses': 2, 'cache_hits': 2, 'errors': 0, 'uptime_seconds': 229.885491, 'cache_size': 4, 'history_length': 36}
+2026-01-15 01:23:40,945 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:23:45,690 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:23:46,894 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:23:46,895 - AmmaarBhaiChatBot - INFO - Loaded 36 conversations
+2026-01-15 01:23:46,896 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:23:54,384 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:40:06,140 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:40:06,143 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 980.453725, 'cache_size': 1, 'history_length': 37}
+2026-01-15 01:40:06,143 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:40:12,246 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:40:13,941 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:40:13,942 - AmmaarBhaiChatBot - INFO - Loaded 37 conversations
+2026-01-15 01:40:13,943 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:40:29,535 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:40:50,749 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:41:18,433 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:41:32,387 - AmmaarBhaiChatBot - INFO - Local match: learned_4c64ffba (confidence: 1.00)
+2026-01-15 01:43:41,968 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:44:07,471 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:47:06,553 - AmmaarBhaiChatBot - INFO - Local match: learned_0abc09f7 (confidence: 1.00)
+2026-01-15 01:47:26,586 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:49:07,528 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:49:07,531 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 8, 'local_responses': 8, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 535.28526, 'cache_size': 8, 'history_length': 45}
+2026-01-15 01:49:07,531 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:49:13,019 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:49:14,399 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:49:14,400 - AmmaarBhaiChatBot - INFO - Loaded 45 conversations
+2026-01-15 01:49:14,400 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:49:21,373 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:49:37,649 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:49:50,552 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:49:59,870 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:50:13,473 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:50:32,507 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 01:52:49,718 - AmmaarBhaiChatBot - INFO - Local match: learned_da30e9a8 (confidence: 1.00)
+2026-01-15 01:53:10,237 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:53:20,061 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:53:54,284 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:53:54,287 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 10, 'local_responses': 2, 'ai_responses': 7, 'cache_hits': 1, 'errors': 0, 'uptime_seconds': 281.268796, 'cache_size': 9, 'history_length': 50}
+2026-01-15 01:53:54,287 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 01:53:59,466 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 01:54:00,673 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 01:54:00,674 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 01:54:00,674 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 01:54:05,532 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 01:55:21,694 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 01:55:21,696 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 82.231283, 'cache_size': 1, 'history_length': 50}
+2026-01-15 01:55:21,697 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 12:33:34,033 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 12:33:35,279 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 12:33:35,295 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 12:33:35,296 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 12:33:42,770 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 12:33:53,560 - AmmaarBhaiChatBot - INFO - Local match: status (confidence: 1.00)
+2026-01-15 12:34:09,229 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 12:34:20,081 - AmmaarBhaiChatBot - INFO - Local match: learned_4c64ffba (confidence: 1.00)
+2026-01-15 12:34:41,176 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 12:35:08,624 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 12:35:28,021 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 12:36:35,518 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 12:36:35,520 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 7, 'local_responses': 5, 'ai_responses': 2, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 181.488381, 'cache_size': 7, 'history_length': 50}
+2026-01-15 12:36:35,521 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 14:05:39,639 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:05:40,800 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 14:05:40,803 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 14:05:40,804 - AmmaarBhaiChatBot - INFO - Chatbot initialized successfully
+2026-01-15 14:05:49,042 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:06:01,078 - AmmaarBhaiChatBot - INFO - Local match: status (confidence: 1.00)
+2026-01-15 14:06:09,731 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 14:06:27,854 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 14:06:38,852 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 14:06:46,467 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:07:01,970 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 14:07:29,731 - AmmaarBhaiChatBot - INFO - Local match: learned (confidence: 1.00)
+2026-01-15 14:07:35,808 - AmmaarBhaiChatBot - INFO - Local match: learned (confidence: 1.00)
+2026-01-15 14:07:52,411 - AmmaarBhaiChatBot - INFO - Local match: learned_4c64ffba (confidence: 1.00)
+2026-01-15 14:35:11,497 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:35:11,510 - AmmaarBhaiChatBot - INFO - Loaded 1 conversations
+2026-01-15 14:35:11,510 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: DebugTestUser
+2026-01-15 14:35:11,514 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:35:11,514 - AmmaarBhaiChatBot - INFO - Loaded 1 conversations
+2026-01-15 14:35:11,515 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: DebugTestUser
+2026-01-15 14:35:11,517 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:35:11,521 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:35:11,537 - AmmaarBhaiChatBot - INFO - Loaded 2 conversations
+2026-01-15 14:35:11,537 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: DebugTestUser
+2026-01-15 14:35:11,539 - AmmaarBhaiChatBot - INFO - Multi-intent local match: 2 segments
+2026-01-15 14:37:28,184 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:37:29,777 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 14:37:29,778 - AmmaarBhaiChatBot - INFO - Loaded 3 conversations
+2026-01-15 14:37:29,778 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 14:37:39,789 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:38:54,270 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 14:38:54,274 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 1, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 86.098388, 'cache_size': 1, 'history_length': 4}
+2026-01-15 14:38:54,275 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 14:40:37,601 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 14:40:37,604 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 10, 'local_responses': 7, 'ai_responses': 3, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 2097.96618, 'cache_size': 10, 'history_length': 50}
+2026-01-15 14:40:37,604 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 14:40:43,107 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 14:40:44,320 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 14:40:44,321 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 14:40:44,322 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 14:40:51,416 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:41:01,672 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 14:41:12,076 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 14:41:25,530 - AmmaarBhaiChatBot - INFO - Learned user name: Muaz
+2026-01-15 14:41:25,540 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 14:42:07,322 - AmmaarBhaiChatBot - INFO - Local match: status (confidence: 1.00)
+2026-01-15 14:42:14,881 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 15:03:49,724 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 15:03:49,727 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 6, 'local_responses': 3, 'ai_responses': 3, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 1386.62065, 'cache_size': 6, 'history_length': 50}
+2026-01-15 15:03:49,728 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 15:26:20,633 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 15:26:21,879 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 15:26:21,882 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 15:26:21,883 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 15:26:28,623 - AmmaarBhaiChatBot - INFO - Local match: learned_da30e9a8 (confidence: 1.00)

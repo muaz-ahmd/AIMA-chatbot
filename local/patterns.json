@@ -58,7 +58,7 @@
       "i'm lost"
     ],
     "responses": [
-      "No worries — let's slow it down and break it into smaller steps.",
+      "No worries \u00e2\u20ac\u201d let's slow it down and break it into smaller steps.",
       "Alright, let's rewind and explain this from the basics.",
       "Got it. I'll explain it in a simpler way."
     ],
@@ -69,7 +69,7 @@
       "\\b(what do you mean|can you clarify|clarify that|be more specific)\\b"
     ],
     "responses": [
-      "Sure — here's what I meant in clearer terms.",
+      "Sure \u00e2\u20ac\u201d here's what I meant in clearer terms.",
       "Let me clarify that point more precisely.",
       "Good catch. Here's a clearer explanation."
     ],
@@ -80,7 +80,7 @@
       "\\b(wait|hold on|give me a second|one moment)\\b"
     ],
     "responses": [
-      "Alright — take your time.",
+      "Alright \u00e2\u20ac\u201d take your time.",
       "No rush. I'm here when you're ready.",
       "Paused. Continue when ready."
     ],
@@ -93,7 +93,7 @@
     ],
     "responses": [
       "Let's compare the options logically and see which fits your goal.",
-      "Tell me the choices and your priority — speed, cost, or simplicity.",
+      "Tell me the choices and your priority \u00e2\u20ac\u201d speed, cost, or simplicity.",
       "We can weigh pros and cons step by step."
     ],
     "priority": 8
@@ -103,7 +103,7 @@
       "\\b(teach me|i want to learn|explain from scratch|learn step by step)\\b"
     ],
     "responses": [
-      "Alright — we'll treat this like a lesson and build it layer by layer.",
+      "Alright \u00e2\u20ac\u201d we'll treat this like a lesson and build it layer by layer.",
       "We'll start from fundamentals and move upward.",
       "Learning mode on. Basics first, complexity later."
     ],
@@ -114,7 +114,7 @@
       "\\b(show an example|give an example|example please|with example)\\b"
     ],
     "responses": [
-      "Sure — here's a concrete example.",
+      "Sure \u00e2\u20ac\u201d here's a concrete example.",
       "An example will make this clearer. Let's look at one.",
       "I'll demonstrate with a simple example."
     ],
@@ -136,7 +136,7 @@
       "\\b(step by step|steps only|one step at a time|procedure)\\b"
     ],
     "responses": [
-      "Alright — step one first, nothing else.",
+      "Alright \u00e2\u20ac\u201d step one first, nothing else.",
       "We'll go sequentially, no skipping steps.",
       "Let's do this one step at a time."
     ],
@@ -158,7 +158,7 @@
       "\\b(go deeper|more detail|in depth|technical explanation)\\b"
     ],
     "responses": [
-      "Alright — switching to a deeper, more technical explanation.",
+      "Alright \u00e2\u20ac\u201d switching to a deeper, more technical explanation.",
       "Let's dig into the underlying mechanics.",
       "We'll go beneath the surface now."
     ],
@@ -169,7 +169,7 @@
       "\\b(that's wrong|you are wrong|mistake|incorrect)\\b"
     ],
     "responses": [
-      "Thanks for pointing that out — let's correct it.",
+      "Thanks for pointing that out \u00e2\u20ac\u201d let's correct it.",
       "You're right to question that. Here's the corrected version.",
       "Good catch. Let's fix it properly."
     ],
@@ -180,7 +180,7 @@
       "\\b(are you sure|is this correct|can i trust this|reliable)\\b"
     ],
     "responses": [
-      "Based on known information, yes — but we can double-check.",
+      "Based on known information, yes \u00e2\u20ac\u201d but we can double-check.",
       "This is accurate to the best of current knowledge.",
       "If you'd like, we can verify it from first principles."
     ],
@@ -191,7 +191,7 @@
       "\\b(done|finished|completed|that's all)\\b"
     ],
     "responses": [
-      "Alright — task noted as complete.",
+      "Alright \u00e2\u20ac\u201d task noted as complete.",
       "Done. Let me know what you'd like to tackle next.",
       "Completion acknowledged."
     ],
@@ -202,7 +202,7 @@
       "\\b(remember this|note this|keep this in mind)\\b"
     ],
     "responses": [
-      "Understood — noted for this conversation.",
+      "Understood \u00e2\u20ac\u201d noted for this conversation.",
       "I'll keep that in mind as we continue.",
       "Acknowledged."
     ],
@@ -213,11 +213,82 @@
       "\\b(change topic|new topic|different question|switch topic)\\b"
     ],
     "responses": [
-      "Alright — new topic. Go ahead.",
+      "Alright \u00e2\u20ac\u201d new topic. Go ahead.",
       "Topic switched. What's next?",
       "We can reset and start fresh."
     ],
     "priority": 5
+  },
+  "learned": {
+    "patterns": [
+      "\\bWho\\ is\\ God\\b"
+    ],
+    "responses": [
+      "Allah"
+    ],
+    "priority": 5
+  },
+  "learned_fdc76e01": {
+    "patterns": [
+      "\\bWho\\ is\\ God\\b"
+    ],
+    "responses": [
+      "Allah"
+    ],
+    "priority": 9
+  },
+  "learned_293742ad": {
+    "patterns": [
+      "\\bWho\\ is\\ God\\b"
+    ],
+    "responses": [
+      "Allah"
+    ],
+    "priority": 9
+  },
+  "learned_4c64ffba": {
+    "patterns": [
+      "\\bWho\\ is\\ Allah\\b"
+    ],
+    "responses": [
+      "The Lord of the Universe"
+    ],
+    "priority": 9
+  },
+  "learned_0abc09f7": {
+    "patterns": [
+      "\\bWhats\\ happening\\ in\\ india\\ today\\b"
+    ],
+    "responses": [
+      "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait."
+    ],
+    "priority": 9
+  },
+  "learned_2efb4738": {
+    "patterns": [
+      "\\bWhats\\ going\\ on\\ in\\ Venezuela\\b"
+    ],
+    "responses": [
+      "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait."
+    ],
+    "priority": 9
+  },
+  "learned_da30e9a8": {
+    "patterns": [
+      "\\bWho\\ owns\\ AIMA\\ Chatbot\\b"
+    ],
+    "responses": [
+      "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar"
+    ],
+    "priority": 9
+  },
+  "learned_e0667cf5": {
+    "patterns": [
+      "\\bMy\\ name\\ is\\ John\\b"
+    ],
+    "responses": [
+      "Hello John"
+    ],
+    "priority": 9
   }
 }
-

@@ -11,9 +11,9 @@ from core.chatbot import HybridChatbot
 class ChatbotCLI:
     """Command-line interface for chatbot"""
     
-    def __init__(self):
+    def __init__(self, user_override: str = None):
         self.config = ChatbotConfig()
-        self.chatbot = HybridChatbot(self.config)
+        self.chatbot = HybridChatbot(self.config, user_override=user_override)
         self.running = False
     
     def print_banner(self):
@@ -134,6 +134,13 @@ class ChatbotCLI:
         elif cmd == 'config':
             self.show_config()
             return True
+
+        elif cmd.startswith('autolearn'):
+            return self.handle_autolearn(cmd)
+
+        elif cmd == 'train':
+            self.train_mode()
+            return True
         
         return False
     
@@ -149,6 +156,8 @@ Available Commands:
     clear    - Clear conversation history
     quit     - Exit the chatbot
     exit     - Exit the chatbot
+    train    - Manually teach the bot a new response
+    autolearn [on/off] - Toggle auto-learning from AI
 
 Usage:
     Type your message and press Enter. The chatbot will:
@@ -196,9 +205,56 @@ Features:
         print(f"   Response Cache:         {self.config.enable_response_cache}")
         print(f"   Context Enabled:        {self.config.enable_context}")
         print(f"   Max History:            {self.config.max_history_length}")
+        print(f"   Max History:            {self.config.max_history_length}")
         print(f"   Rate Limit:             {self.config.max_requests_per_minute}/min")
+        print(f"   Auto Learning:          {self.config.enable_auto_learning}")
         print("="*60)
     
+    def train_mode(self):
+        """Interactive training mode"""
+        print("\n" + "="*60)
+        print("TRAINING MODE")
+        print("="*60)
+        print("Teach the bot a new pattern. Type 'cancel' to exit.")
+        
+        while True:
+            pattern = input("\n[1] What should I listen for? (Pattern): ").strip()
+            if pattern.lower() == 'cancel':
+                break
+            if not pattern:
+                continue
+                
+            response = input("[2] What should I say? (Response): ").strip()
+            if response.lower() == 'cancel':
+                break
+            if not response:
+                continue
+            
+            if self.chatbot.learn_pattern(pattern, response):
+                print(f"✓ Learned: '{pattern}' -> '{response}'")
+                break
+            else:
+                print("x Failed to save pattern.")
+                break
+        print("="*60)
+
+    def handle_autolearn(self, cmd: str) -> bool:
+        """Toggle auto-learning"""
+        parts = cmd.split()
+        if len(parts) > 1:
+            state = parts[1].lower()
+            if state in ['on', 'true', '1']:
+                self.config.enable_auto_learning = True
+                print("Auto-learning ENABLED")
+            elif state in ['off', 'false', '0']:
+                self.config.enable_auto_learning = False
+                print("Auto-learning DISABLED")
+            else:
+                print("Usage: autolearn [on/off]")
+        else:
+            print(f"Auto-learning is currently: {'ENABLED' if self.config.enable_auto_learning else 'DISABLED'}")
+        return True
+
     def shutdown(self):
         """Graceful shutdown"""
         print("\n" + "="*60)
@@ -215,7 +271,12 @@ Features:
 
 def main():
     """Entry point"""
-    cli = ChatbotCLI()
+    import argparse
+    parser = argparse.ArgumentParser(description="AIMA ChatBot")
+    parser.add_argument("--user", type=str, help="Override user identity", default=None)
+    args = parser.parse_args()
+
+    cli = ChatbotCLI(user_override=args.user)
     cli.print_banner()
     cli.setup()
     cli.run()

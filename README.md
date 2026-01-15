@@ -6,11 +6,14 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
 ## 🚀 Features
 
 *   **Hybrid Architecture**: Seamlessly switches between local logic (fast, offline-capable) and Cloud AI (smart, generative).
+*   **Multi-Intent Handling**: Understands compound questions like "Hi! What time is it?" by splitting and combining responses.
+*   **Long-Term User Memory**: Remembers facts about you across sessions (e.g., "My name is X") in user-specific profiles.
 *   **Google Gemini 2.0 Integration**: Powered by the latest `gemini-2.0-flash` model for high-speed, cost-effective intelligence.
 *   **CLI-First Design**: A professional command-line interface with ASCII art, clean formatting, and line-wrapping for optimal readability.
 *   **Concise Responses**: Tuned to provide direct, no-fluff answers without unnecessary markdown or filler text.
 *   **Extensive Configuration**: Fully customizable behavior via `config.py`.
 *   **Robust Error Handling**: Auto-detects supported SDK versions and manages API connectivity issues gracefully.
+*   **Smart Caching**: Caches only successful responses, not errors, ensuring reliable retry behavior.
 
 ## 🛠️ Prerequisites
 
@@ -29,7 +32,7 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: If `requirements.txt` is missing, ensure you have `google-genai` installed: `pip install google-genai`)*
+    *(Note: If `requirements.txt` is missing, ensure you have `google-genai` and `fuzzywuzzy` installed)*
 
 3.  **Set Up API Key**:
     You can either set it as an environment variable (Recommended):
@@ -47,11 +50,23 @@ Run the chatbot using Python:
 python main.py
 ```
 
+### User Profiles
+
+By default, the bot uses your OS username to create a personal profile. To use a different identity:
+
+```bash
+python main.py --user=Alice
+```
+
+This creates `data/users/Alice.json` to store that user's memories separately.
+
 ### CLI Commands
 *   `help` : Show the help menu.
 *   `stats` : Display session statistics (token usage, local vs AI response count).
 *   `config` : View current configuration settings.
 *   `clear` : Clear the conversation history.
+*   `train` : Manually teach the bot a new response pattern.
+*   `autolearn [on/off]` : Toggle automatic learning from AI responses.
 *   `quit` / `exit` : Close the application.
 
 ## ⚙️ Configuration
@@ -63,6 +78,7 @@ The bot is pre-configured for optimal performance, but you can customize it in `
 *   **`system_instruction`**: Defines the persona of the bot. Currently set to be a "Helpful CLI assistant" that uses concise, plain text.
 *   **`enable_local_priority`**: If `True`, the bot checks local patterns before calling the AI (saves quota).
 *   **`max_history_length`**: Number of conversation turns to remember.
+*   **`enable_auto_learning`**: If `True`, the bot automatically learns new patterns from successful AI responses.
 
 ## 🔧 Troubleshooting
 
@@ -71,8 +87,24 @@ This means your `google-genai` library is outdated or incompatible. The bot incl
 
 ### "404 NOT_FOUND" (Model Error)
 The configured model name is invalid for your API key.
-*   Use the included script to check valid models: `python check_models.py`
-*   Update `gemini_model` in `config.py` with a name from that list.
+*   Update `gemini_model` in `config.py` with a valid model name (e.g., `gemini-2.0-flash-exp`).
 
 ### "503 UNAVAILABLE"
-The Google Gemini service is overloaded. Wait a moment and try again, or switch to a different model variant (e.g., from `flash` to `pro`) in `config.py`.
+The Google Gemini service is overloaded. Wait a moment and try again, or switch to a different model variant in `config.py`.
+
+### Cached Error Messages
+If the bot keeps returning the same error (e.g., "quota exceeded"), clear the cache by running the `clear` command or restart the bot.
+
+## 📝 Recent Updates
+
+### Bug Fixes
+- Fixed import crashes when `google-genai` SDK is missing
+- Added UTF-8 encoding to all file operations (Windows compatibility)
+- Fixed regex generation for patterns ending in punctuation
+- Prevented caching of error responses
+- Added thread safety to response cache
+
+### New Features
+- **Multi-Intent Handling**: Answers compound questions by splitting on punctuation
+- **Long-Term User Memory**: Remembers user facts across sessions with per-user profiles
+- **User Identity**: Support for `--user` CLI argument to switch between profiles
