@@ -3,11 +3,12 @@
 
 AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pattern matching** for instant responses with **Google Gemini AI** for complex, intelligent reasoning. It is designed to be a lightweight, CLI-based assistant that runs efficiently on your local machine.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
-![Interface](https://img.shields.io/badge/Interface-CLI-green)
-![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)
-![Architecture](https://img.shields.io/badge/Architecture-Hybrid-blueviolet)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![Interface](https://img.shields.io/badge/Interface-CLI-green?logo=gnu-bash&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange?logo=google&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Hybrid-blueviolet?logo=stackshare&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-success?logo=github&logoColor=white)
+
 
 
 ## 🚀 Features
