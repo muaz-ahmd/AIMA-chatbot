@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T01:16:09.616058",
-    "user": "God",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:19:09.535845",
-    "user": "hey",
-    "bot": "Hello! How can I help you today?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:19:15.500184",
-    "user": "help me",
-    "bot": "I'm sorry, I couldn't process that. Could you rephrase?",
-    "source": "GEMINI"
-  },
-  {
     "timestamp": "2026-01-15T01:20:22.223175",
     "user": "Who is God",
     "bot": "I don't have a response for this.",
@@ -297,6 +279,24 @@
     "timestamp": "2026-01-15T15:26:28.618600",
     "user": "Who owns aima chatbot",
     "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T16:47:12.970360",
+    "user": "hey! how are you",
+    "bot": "Hey! How's it going? I'm here and ready to help!",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T16:51:08.460031",
+    "user": "Hello! help",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T16:51:21.497598",
+    "user": "Hello! Thanks!",
+    "bot": "Greetings! What brings you here? Glad I could assist!",
     "source": "LOCAL"
   }
 ]
