@@ -1,14 +1,12 @@
 {
   "math_help": {
     "patterns": [
-      "\\b(calculate|math|compute|solve)\\b",
-      "what is",
-      "how much is"
+      "\\b(help with math|math help|how to calculate)\\b"
     ],
     "responses": [
-      "I can solve basic math! Just type an expression like: 2 + 2, 10 * 5, 100 / 4, or 2^8"
+      "I can solve math expressions! Try:\n- Direct: 2 + 2, 10 * 5, 100 / 4, 2^8\n- Natural: solve 15 * 3, what is 50 - 25, calculate 2^10"
     ],
-    "priority": 8
+    "priority": 5
   },
   "greetings": {
     "patterns": [
@@ -335,6 +333,15 @@
     ],
     "responses": [
       "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks."
+    ],
+    "priority": 9
+  },
+  "learned_e6d3f729": {
+    "patterns": [
+      "\\bwhat\\ is\\ an\\ API\\ key\\b"
+    ],
+    "responses": [
+      "An API key is a unique\nidentifier. It authenticates\na user, developer, or program\nto an API. It grants access\nto specific services and\ntracks usage."
     ],
     "priority": 9
   }

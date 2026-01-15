@@ -635,3 +635,28 @@ google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429,
 2026-01-15 17:30:07,271 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
 2026-01-15 17:30:07,275 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 41.525421, 'cache_size': 1, 'history_length': 50}
 2026-01-15 17:30:07,276 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 17:35:14,122 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 17:35:15,328 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 17:35:15,329 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 17:35:15,330 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 17:35:22,880 - AmmaarBhaiChatBot - INFO - Math calculation: 1+5 = 6
+2026-01-15 17:35:44,267 - AmmaarBhaiChatBot - INFO - Math calculation: 21*3+4 = 67
+2026-01-15 17:37:43,147 - AmmaarBhaiChatBot - INFO - Local match: math_help (confidence: 1.00)
+2026-01-15 17:37:55,438 - AmmaarBhaiChatBot - INFO - Math calculation: 31*3+21*2+11*1 = 146
+2026-01-15 17:45:10,286 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 17:45:10,290 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 4, 'local_responses': 4, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 596.169342, 'cache_size': 4, 'history_length': 50}
+2026-01-15 17:45:10,290 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 19:03:56,466 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 19:03:57,957 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 19:03:57,959 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 19:03:57,959 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 19:04:01,005 - AmmaarBhaiChatBot - INFO - Math calculation: 2 + 2 = 4
+2026-01-15 19:04:12,594 - AmmaarBhaiChatBot - INFO - Math calculation: 10 * 5 = 50
+2026-01-15 19:04:26,657 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 19:04:26,666 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 19:04:51,965 - AmmaarBhaiChatBot - INFO - Math calculation: 2^8 = 256
+2026-01-15 19:04:55,436 - AmmaarBhaiChatBot - INFO - Math calculation: 15 * 3 + 7 = 52
+2026-01-15 19:04:58,876 - AmmaarBhaiChatBot - INFO - Math calculation: 50 - 25 = 25
+2026-01-15 19:05:02,469 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 19:05:02,479 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 6, 'local_responses': 5, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 66.020523, 'cache_size': 6, 'history_length': 50}
+2026-01-15 19:05:02,482 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete

@@ -91,12 +91,23 @@ class HybridChatbot:
                     self.logger.debug("Cache hit")
                     return self._format_response(cached, "CACHED")
             
-            # Check if input is a math expression
-            if self.math_solver.is_math_expression(user_input):
-                result = self.math_solver.solve(user_input)
+            # Check if input is a math expression (try extraction first, then direct)
+            expression_to_solve = None
+            
+            # First, try to extract expression from natural language
+            extracted = self.math_solver.extract_expression(user_input)
+            if extracted:
+                expression_to_solve = extracted
+            # If no extraction, check if the entire input is a direct math expression
+            elif self.math_solver.is_math_expression(user_input):
+                expression_to_solve = user_input
+            
+            # If we have an expression, solve it
+            if expression_to_solve:
+                result = self.math_solver.solve(expression_to_solve)
                 if result:
                     value, formatted = result
-                    response = f"{user_input} = {formatted}"
+                    response = f"{expression_to_solve} = {formatted}"
                     
                     # Cache math result
                     if self.config.enable_response_cache:

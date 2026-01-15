@@ -23,6 +23,43 @@ class MathSolver:
         self.math_pattern = re.compile(
             r'^[\d\s\+\-\*/\(\)\^\%\.]+$'
         )
+        
+        # Keywords that might precede a math expression
+        self.math_keywords = [
+            r'\b(?:solve|calculate|compute|evaluate)\s+',
+            r'\b(?:what\s+is)\s+',
+            r'\b(?:how\s+much\s+is)\s+',
+            r'\b(?:whats)\s+',
+        ]
+    
+    def extract_expression(self, text: str) -> Optional[str]:
+        """
+        Extract a math expression from natural language input.
+        Returns the expression if found and valid, otherwise None.
+        
+        Examples:
+            "solve 2 + 2" -> "2 + 2"
+            "what is 10 * 5" -> "10 * 5"
+            "what is an API key" -> None (not a math expression)
+        """
+        text = text.strip()
+        
+        # Try to remove math keywords from the beginning
+        for keyword_pattern in self.math_keywords:
+            match = re.match(keyword_pattern, text, re.IGNORECASE)
+            if match:
+                # Extract everything after the keyword
+                potential_expr = text[match.end():].strip()
+                
+                # Validate that the extracted part is actually a math expression
+                if potential_expr and self.is_math_expression(potential_expr):
+                    return potential_expr
+                else:
+                    # Keyword found but what follows isn't a valid math expression
+                    return None
+        
+        # No keyword found, return None (we'll check if it's a direct expression elsewhere)
+        return None
     
     def is_math_expression(self, text: str) -> bool:
         """Check if text looks like a math expression."""

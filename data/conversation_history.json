@@ -1,53 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T01:43:41.964805",
-    "user": "Who is Muhammed SAW",
-    "bot": "Jamia Millia Islamia became a Central University by an Act of Parliament in December 1988 (The Jamia Millia Islamia Act, 1988).",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:44:07.469571",
-    "user": "Delhi University",
-    "bot": "Official contact: Jamia Millia Islamia, Jamia Nagar, New Delhi-110025, phone numbers and contact details available on the university website.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:47:06.549873",
-    "user": "Whats happening in India today",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:47:26.584510",
-    "user": "Whats happening in Japan",
-    "bot": "Jamia Millia Islamia became a Central University by an Act of Parliament in December 1988 (The Jamia Millia Islamia Act, 1988).",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:49:21.370910",
-    "user": "who is muhammed saw",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:49:37.647445",
-    "user": "where is japan situated",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:49:50.550052",
-    "user": "Where is Delhi University",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:49:59.868049",
-    "user": "Where is JMI",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
     "timestamp": "2026-01-15T01:50:13.470677",
     "user": "When was JMI founded",
     "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
@@ -297,6 +249,54 @@
     "timestamp": "2026-01-15T17:35:44.263429",
     "user": "21*3+4",
     "bot": "21*3+4 = 67",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T17:37:43.139476",
+    "user": "calculate 31*3+21*2+11*1",
+    "bot": "I can solve basic math! Just type an expression like: 2 + 2, 10 * 5, 100 / 4, or 2^8",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T17:37:55.432855",
+    "user": "31*3+21*2+11*1",
+    "bot": "31*3+21*2+11*1 = 146",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:01.002543",
+    "user": "solve 2 + 2",
+    "bot": "2 + 2 = 4",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:12.571153",
+    "user": "what is 10 * 5",
+    "bot": "10 * 5 = 50",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:26.660143",
+    "user": "what is an API key",
+    "bot": "An API key is a unique\nidentifier. It authenticates\na user, developer, or program\nto an API. It grants access\nto specific services and\ntracks usage.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:51.939338",
+    "user": "calculate 2^8",
+    "bot": "2^8 = 256",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:55.429186",
+    "user": "evaluate 15 * 3 + 7",
+    "bot": "15 * 3 + 7 = 52",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T19:04:58.873574",
+    "user": "how much is 50 - 25",
+    "bot": "50 - 25 = 25",
     "source": "MATH"
   }
 ]
