@@ -600,3 +600,38 @@ google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429,
 2026-01-15 15:26:21,882 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
 2026-01-15 15:26:21,883 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
 2026-01-15 15:26:28,623 - AmmaarBhaiChatBot - INFO - Local match: learned_da30e9a8 (confidence: 1.00)
+2026-01-15 16:46:54,191 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 16:46:55,593 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 16:46:55,596 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 16:46:55,597 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 16:47:12,978 - AmmaarBhaiChatBot - INFO - Multi-intent local match: 2 segments
+2026-01-15 16:51:08,462 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 16:51:21,507 - AmmaarBhaiChatBot - INFO - Multi-intent local match: 2 segments
+2026-01-15 16:52:38,765 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 16:52:38,768 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 3, 'local_responses': 3, 'ai_responses': 0, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 344.57958, 'cache_size': 1, 'history_length': 50}
+2026-01-15 16:52:38,768 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 17:04:11,456 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 17:04:12,657 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 17:04:12,658 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 17:04:12,659 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 17:04:24,961 - AmmaarBhaiChatBot - INFO - Multi-intent local match: 2 segments
+2026-01-15 17:21:03,811 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 17:21:03,815 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 17:22:21,210 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 17:22:21,217 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 17:23:32,490 - AmmaarBhaiChatBot - INFO - Local match: knowledge_base (confidence: 0.90)
+2026-01-15 17:26:30,603 - AmmaarBhaiChatBot - INFO - Local match: greetings (confidence: 1.00)
+2026-01-15 17:26:51,976 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 17:26:51,980 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 17:27:06,316 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 17:27:06,319 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 7, 'local_responses': 3, 'ai_responses': 3, 'cache_hits': 1, 'errors': 0, 'uptime_seconds': 1374.863736, 'cache_size': 5, 'history_length': 50}
+2026-01-15 17:27:06,319 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete
+2026-01-15 17:29:25,751 - AmmaarBhaiChatBot - INFO - Initializing chatbot...
+2026-01-15 17:29:27,018 - AmmaarBhaiChatBot - INFO - Gemini API initialized
+2026-01-15 17:29:27,019 - AmmaarBhaiChatBot - INFO - Loaded 50 conversations
+2026-01-15 17:29:27,020 - AmmaarBhaiChatBot - INFO - Chatbot initialized for user: muaza
+2026-01-15 17:29:38,825 - AmmaarBhaiChatBot - INFO - Auto-learned new pattern
+2026-01-15 17:29:38,832 - AmmaarBhaiChatBot - INFO - AI response generated
+2026-01-15 17:30:07,271 - AmmaarBhaiChatBot - INFO - Shutting down chatbot...
+2026-01-15 17:30:07,275 - AmmaarBhaiChatBot - INFO - Session stats: {'total_queries': 1, 'local_responses': 0, 'ai_responses': 1, 'cache_hits': 0, 'errors': 0, 'uptime_seconds': 41.525421, 'cache_size': 1, 'history_length': 50}
+2026-01-15 17:30:07,276 - AmmaarBhaiChatBot - INFO - Chatbot shutdown complete

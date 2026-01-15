@@ -290,5 +290,41 @@
       "Hello John"
     ],
     "priority": 9
+  },
+  "learned_675e3453": {
+    "patterns": [
+      "\\bhelo\\b"
+    ],
+    "responses": [
+      "Hello, Muaz! How can I help?"
+    ],
+    "priority": 9
+  },
+  "learned_cab8b7df": {
+    "patterns": [
+      "\\bwhich\\ AI\\ API\\ is\\ the\\ best\\ for\\ reasoning\\b"
+    ],
+    "responses": [
+      "The \"best\" AI API for reasoning\ndepends on your specific use case.\n\nTop choices often include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nConsider cost, context window size,\nand benchmark performance for your tasks."
+    ],
+    "priority": 9
+  },
+  "learned_3651226a": {
+    "patterns": [
+      "\\bSo\\ im\\ a\\ BTech\\ Electronics\\ Student\\ at\\ Jamia\\ Millia\\ Islamia\\ what\\ are\\ the\\ career\\ opportunities\\ available\\ in\\ this\\ domain\\b"
+    ],
+    "responses": [
+      "Electronics Engineering offers\ndiverse career opportunities.\n\nHardware Design Engineer\nEmbedded Systems Engineer\nVLSI Design Engineer\nTelecommunication Engineer\nNetwork Engineer\nRF Engineer\nControl Systems Engineer\nRobotics Engineer\nAutomation Engineer\nIoT Developer\nResearch & Development\nTechnical Sales Engineer\nField Service Engineer"
+    ],
+    "priority": 9
+  },
+  "learned_0f54a6d4": {
+    "patterns": [
+      "\\bwhat\\ is\\ the\\ best\\ api\\ for\\ reasoning\\b"
+    ],
+    "responses": [
+      "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks."
+    ],
+    "priority": 9
   }
 }

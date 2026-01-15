@@ -1,47 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T01:20:22.223175",
-    "user": "Who is God",
-    "bot": "I don't have a response for this.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:20:28.544522",
-    "user": "Who is Allah",
-    "bot": "The Lord of the Universe",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:20:50.795365",
-    "user": "Whats happening in india today",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:23:04.433295",
-    "user": "Whats going on in Venezuela",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:23:54.380636",
-    "user": "Whats happening in the US",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:40:29.529790",
-    "user": "When was Jamia Millia Islamia founded",
-    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:40:50.744237",
-    "user": "Who is the VC of JMI",
-    "bot": "The Visitor of Jamia Millia Islamia is the President of India; the university has a Chancellor and Vice-Chancellor as per statutory structure (these posts have changed holders over time). The current VC is Prof. Mazhar Asif.",
-    "source": "LOCAL"
-  },
-  {
     "timestamp": "2026-01-15T01:41:18.427507",
     "user": "Whats the ranking of JMI",
     "bot": "Jamia Millia Islamia received the highest grade 'A++' from the National Assessment and Accreditation Council (NAAC) in its second cycle of assessment (2021).",
@@ -298,5 +256,47 @@
     "user": "Hello! Thanks!",
     "bot": "Greetings! What brings you here? Glad I could assist!",
     "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T17:04:24.953621",
+    "user": "hello man! how are you",
+    "bot": "Greetings! What brings you here? I'm doing great! How about you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T17:21:03.812340",
+    "user": "helo",
+    "bot": "Hello, Muaz! How can I help?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T17:22:21.211168",
+    "user": "which AI API is the best for reasoning",
+    "bot": "The \"best\" AI API for reasoning\ndepends on your specific use case.\n\nTop choices often include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nConsider cost, context window size,\nand benchmark performance for your tasks.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T17:23:32.484297",
+    "user": "when was Jamia Millia Islamia Established",
+    "bot": "Jamia Millia Islamia was established with the goal of providing a national (millia) university and promoting education for social upliftment, emphasizing secular and inclusive education.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T17:26:30.598900",
+    "user": "Hey! So im a BTech Electronics Student at Jamia Millia Islamia what are the career opportunities available in this domain",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T17:26:51.976911",
+    "user": "So im a BTech Electronics Student at Jamia Millia Islamia what are the career opportunities available in this domain",
+    "bot": "Electronics Engineering offers\ndiverse career opportunities.\n\nHardware Design Engineer\nEmbedded Systems Engineer\nVLSI Design Engineer\nTelecommunication Engineer\nNetwork Engineer\nRF Engineer\nControl Systems Engineer\nRobotics Engineer\nAutomation Engineer\nIoT Developer\nResearch & Development\nTechnical Sales Engineer\nField Service Engineer",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T17:29:38.827974",
+    "user": "what is the best api for reasoning",
+    "bot": "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks.",
+    "source": "GEMINI"
   }
 ]
