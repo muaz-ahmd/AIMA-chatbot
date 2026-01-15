@@ -8,7 +8,7 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
 *   **Hybrid Architecture**: Seamlessly switches between local logic (fast, offline-capable) and Cloud AI (smart, generative).
 *   **Multi-Intent Handling**: Understands compound questions like "Hi! What time is it?" by splitting and combining responses.
 *   **Long-Term User Memory**: Remembers facts about you across sessions (e.g., "My name is X") in user-specific profiles.
-*   **Google Gemini 2.0 Integration**: Powered by the latest `gemini-2.0-flash` model for high-speed, cost-effective intelligence.
+*   **Google Gemini 2.5 Integration**: Powered by the latest `gemini-2.5-flash` model for high-speed, cost-effective intelligence.
 *   **CLI-First Design**: A professional command-line interface with ASCII art, clean formatting, and line-wrapping for optimal readability.
 *   **Concise Responses**: Tuned to provide direct, no-fluff answers without unnecessary markdown or filler text.
 *   **Extensive Configuration**: Fully customizable behavior via `config.py`.
@@ -74,7 +74,7 @@ This creates `data/users/Alice.json` to store that user's memories separately.
 The bot is pre-configured for optimal performance, but you can customize it in `config.py`.
 
 ### Key Settings
-*   **`gemini_model`**: Currently set to `gemini-2.0-flash`. You can change this to `gemini-1.5-pro` or others if needed.
+*   **`gemini_model`**: Currently set to `gemini-2.5-flash`. You can change this to `gemini-2.0-flash-exp` or other available models if needed.
 *   **`system_instruction`**: Defines the persona of the bot. Currently set to be a "Helpful CLI assistant" that uses concise, plain text.
 *   **`enable_local_priority`**: If `True`, the bot checks local patterns before calling the AI (saves quota).
 *   **`max_history_length`**: Number of conversation turns to remember.
@@ -84,10 +84,6 @@ The bot is pre-configured for optimal performance, but you can customize it in `
 
 ### "No supported generate interface available..."
 This means your `google-genai` library is outdated or incompatible. The bot includes a fix for this in `gemini_client.py`. Ensure you have the latest version installed.
-
-### "404 NOT_FOUND" (Model Error)
-The configured model name is invalid for your API key.
-*   Update `gemini_model` in `config.py` with a valid model name (e.g., `gemini-2.0-flash-exp`).
 
 ### "503 UNAVAILABLE"
 The Google Gemini service is overloaded. Wait a moment and try again, or switch to a different model variant in `config.py`.

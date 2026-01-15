@@ -14,7 +14,7 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
 
 2.  **Layer 2: Cloud AI (The Reasoning Layer)**
     *   **Function**: Handles complex queries, creative writing, coding tasks, and general knowledge.
-    *   **Mechanism**: Uses the Google Gemini API (`google.genai` SDK).
+    *   **Mechanism**: Uses the Google Gemini API (`google.genai` SDK) with `gemini-2.5-flash`.
     *   **Benefit**: Access to state-of-the-art Large Language Model (LLM) capabilities.
     *   **Enhancement**: **User Context Injection** - AI receives user profile information for personalized responses.
 
@@ -72,7 +72,7 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
 
 ### 6. `config.py` (The Control Panel)
 *   **Role**: Centralized configuration using Python `dataclasses`.
-*   **Settings**: Stores API keys, model names (`gemini-2.0-flash`), timeout settings, style preferences, auto-learning toggle, etc.
+*   **Settings**: Stores API keys, model names (`gemini-2.5-flash`), timeout settings, style preferences, auto-learning toggle, etc.
 
 ### 7. `local/pattern_matcher.py` (The Pattern Engine)
 *   **Role**: Matches user input against local patterns and knowledge base.
