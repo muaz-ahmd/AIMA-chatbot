@@ -52,7 +52,13 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
 *   **Role**: Splits user input into logical segments for multi-intent handling.
 *   **Logic**: Uses regex to split on `.`, `?`, `!`, `;` and returns cleaned segments.
 
-### 4. `core/user_manager.py` (The Memory Manager)
+### 4. `utils/math_solver.py` (The Calculator)
+*   **Role**: Safely evaluates arithmetic expressions locally.
+*   **Method**: Uses Python's AST (Abstract Syntax Tree) parser - no code execution
+*   **Supported Operations**: +, -, *, /, ^ (power), % (modulo), parentheses
+*   **Safety**: Only mathematical operations allowed, no function calls or variables
+
+### 5. `core/user_manager.py` (The Memory Manager)
 *   **Role**: Manages user-specific data persistence.
 *   **Key Features**:
     *   Auto-detects OS username or uses `--user` override.
@@ -60,7 +66,7 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
     *   Provides `get_context_string()` for AI context injection.
     *   Supports `set_fact()` and `get_fact()` for key-value storage.
 
-### 5. `ai/gemini_client.py` (The Connector)
+### 6. `ai/gemini_client.py` (The Connector)
 *   **Role**: Interfaces with Google's GenAI servers.
 *   **Key Logic**:
     *   **Safe Import Handling**: Gracefully handles missing `google.genai` SDK.
@@ -70,18 +76,18 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
     *   **Error Handling**: Catches network errors, 404s, Rate Limits, and returns safe fallback messages.
     *   **Response Extraction**: Uses `_extract_text()` to safely parse API responses.
 
-### 6. `config.py` (The Control Panel)
+### 7. `config.py` (The Control Panel)
 *   **Role**: Centralized configuration using Python `dataclasses`.
 *   **Settings**: Stores API keys, model names (`gemini-2.5-flash`), timeout settings, style preferences, auto-learning toggle, etc.
 
-### 7. `local/pattern_matcher.py` (The Pattern Engine)
+### 8. `local/pattern_matcher.py` (The Pattern Engine)
 *   **Role**: Matches user input against local patterns and knowledge base.
 *   **Features**:
     *   Regex pattern matching
     *   Fuzzy string matching (using `fuzzywuzzy`)
     *   Knowledge base search with tag-based lookup
 
-### 8. `utils/cache.py` (The Cache Manager)
+### 9. `utils/cache.py` (The Cache Manager)
 *   **Role**: LRU cache for responses with TTL expiration.
 *   **Features**:
     *   Thread-safe operations using `threading.Lock`

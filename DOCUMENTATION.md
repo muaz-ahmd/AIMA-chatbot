@@ -252,7 +252,96 @@ Process:
 
 ---
 
-### 4. `core/user_manager.py` - The Memory Manager
+### 4. `utils/math_solver.py` - The Calculator
+
+**Role**: Safely evaluates arithmetic expressions without API calls.
+
+#### `MathSolver.is_math_expression(text)` - Detection
+
+**Algorithm**:
+```python
+1. Clean input:
+   - Replace ^ with **
+   - Replace x or × with *
+   - Replace ÷ with /
+
+2. Regex check: r'^[\d\s\+\-\*/\(\)\^\%\.]+$'
+   Must contain ONLY: numbers, operators, spaces, parentheses
+
+3. Validation:
+   - Must have at least one number
+   - Must have at least one operator
+   
+4. Return True if valid math expression
+```
+
+**Examples**:
+- `"2 + 2"` → True
+- `"10 * 5 + 3"` → True
+- `"hello world"` → False
+- `"x = 5"` → False (variables not allowed)
+
+#### `MathSolver.solve(expression)` - Evaluation
+
+**Process**:
+```python
+1. Normalize expression:
+   cleaned = "2 + 2"
+   
+2. Parse with AST (Abstract Syntax Tree):
+   tree = ast.parse(cleaned, mode='eval')
+   # Creates safe parse tree: BinOp(Add, Num(2), Num(2))
+
+3. Recursively evaluate tree:
+   - If Num node: return number
+   - If BinOp node: 
+       left = eval(left_node)
+       right = eval(right_node)
+       return OPERATOR[op_type](left, right)
+   - If UnaryOp: handle +/- signs
+
+4. Format result:
+   - Strip trailing zeros from decimals
+   - Return (numeric_value, formatted_string)
+
+Example:
+   solve("2 + 2") → (4, "4")
+   solve("10 / 3") → (3.333333, "3.333333")
+```
+
+**Supported Operators**:
+```python
+ast.Add: operator.add        # +
+ast.Sub: operator.sub        # -
+ast.Mult: operator.mul       # *
+ast.Div: operator.truediv    # /
+ast.Pow: operator.pow        # ** or ^
+ast.Mod: operator.mod        # %
+ast.FloorDiv: operator.floordiv  # //
+```
+
+**Safety Features**:
+- **No code execution**: Uses AST parsing only
+- **No function calls**: Only arithmetic operators allowed
+- **No variables**: Only numbers and operators
+- **Exception handling**: Returns None on invalid input
+- **Protected against**: Division by zero, syntax errors, type errors
+
+**Example Evaluations**:
+```python
+"2 + 2"           → 4
+"10 * 5 + 3"      → 53
+"100 / 4"         → 25
+"2^8"             → 256
+"(5 + 3) * 2"     → 16
+"10 % 3"          → 1
+"2 ** 10"         → 1024
+"sqrt(16)"        → None (functions not supported)
+```
+
+---
+
+### 5. `core/user_manager.py` - The Memory Manager
 
 **Role**: Manages user identity and persistent facts.
 

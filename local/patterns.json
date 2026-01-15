@@ -1,4 +1,15 @@
 {
+  "math_help": {
+    "patterns": [
+      "\\b(calculate|math|compute|solve)\\b",
+      "what is",
+      "how much is"
+    ],
+    "responses": [
+      "I can solve basic math! Just type an expression like: 2 + 2, 10 * 5, 100 / 4, or 2^8"
+    ],
+    "priority": 8
+  },
   "greetings": {
     "patterns": [
       "\\b(hello|hi|hey|greetings|howdy|hola)\\b",

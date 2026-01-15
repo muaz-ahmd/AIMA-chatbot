@@ -1,17 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T01:41:18.427507",
-    "user": "Whats the ranking of JMI",
-    "bot": "Jamia Millia Islamia received the highest grade 'A++' from the National Assessment and Accreditation Council (NAAC) in its second cycle of assessment (2021).",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:41:32.384909",
-    "user": "Who is Allah",
-    "bot": "The Lord of the Universe",
-    "source": "LOCAL"
-  },
-  {
     "timestamp": "2026-01-15T01:43:41.964805",
     "user": "Who is Muhammed SAW",
     "bot": "Jamia Millia Islamia became a Central University by an Act of Parliament in December 1988 (The Jamia Millia Islamia Act, 1988).",
@@ -298,5 +286,17 @@
     "user": "what is the best api for reasoning",
     "bot": "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks.",
     "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T17:35:22.874163",
+    "user": "1+5",
+    "bot": "1+5 = 6",
+    "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T17:35:44.263429",
+    "user": "21*3+4",
+    "bot": "21*3+4 = 67",
+    "source": "MATH"
   }
 ]

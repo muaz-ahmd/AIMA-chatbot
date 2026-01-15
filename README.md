@@ -14,6 +14,7 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
 ## 🚀 Features
 
 *   **Hybrid Architecture**: Seamlessly switches between local logic (fast, offline-capable) and Cloud AI (smart, generative).
+*   **Built-in Math Solver**: Evaluates arithmetic expressions locally (e.g., `2 + 2`, `10^3`, `(5+3)*2`) with zero API cost.
 *   **Multi-Intent Handling**: Understands compound questions like "Hi! What time is it?" by splitting and combining responses.
 *   **Long-Term User Memory**: Remembers facts about you across sessions (e.g., "My name is X") in user-specific profiles.
 *   **Google Gemini 2.5 Integration**: Powered by the latest `gemini-2.5-flash` model for high-speed, cost-effective intelligence.
@@ -112,3 +113,4 @@ If the bot keeps returning the same error (e.g., "quota exceeded"), clear the ca
 - **Multi-Intent Handling**: Answers compound questions by splitting on punctuation
 - **Long-Term User Memory**: Remembers user facts across sessions with per-user profiles
 - **User Identity**: Support for `--user` CLI argument to switch between profiles
+- **Local Math Solver**: Safe arithmetic evaluation using AST parsing (supports +, -, *, /, ^, %, parentheses)

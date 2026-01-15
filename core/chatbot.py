@@ -10,6 +10,7 @@ from local.pattern_matcher import PatternMatcher
 from ai.gemini_client import GeminiClient
 from utils.logger import ChatbotLogger
 from utils.cache import ResponseCache
+from utils.math_solver import MathSolver
 
 
 class HybridChatbot:
@@ -20,6 +21,7 @@ class HybridChatbot:
         self.parser = InputParser(config)
         self.splitter = IntentSplitter()
         self.user_manager = UserManager(config.base_dir, user_override)
+        self.math_solver = MathSolver()
         self.pattern_matcher = PatternMatcher(
             config,
             config.patterns_file
@@ -88,6 +90,24 @@ class HybridChatbot:
                     self.stats['cache_hits'] += 1
                     self.logger.debug("Cache hit")
                     return self._format_response(cached, "CACHED")
+            
+            # Check if input is a math expression
+            if self.math_solver.is_math_expression(user_input):
+                result = self.math_solver.solve(user_input)
+                if result:
+                    value, formatted = result
+                    response = f"{user_input} = {formatted}"
+                    
+                    # Cache math result
+                    if self.config.enable_response_cache:
+                        self.cache.set(parsed.normalized_text, response)
+                    
+                    # Add to history
+                    self._add_to_history(user_input, response, "MATH")
+                    self.stats['local_responses'] += 1
+                    
+                    self.logger.info(f"Math calculation: {response}")
+                    return self._format_response(response, "MATH")
             
             # Try local pattern matching first (Standard)
             if self.config.enable_local_priority:
