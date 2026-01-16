@@ -87,7 +87,19 @@ The defining feature of AIMA is its **Hybrid Engine**. It does not rely solely o
     *   Fuzzy string matching (using `fuzzywuzzy`)
     *   Knowledge base search with tag-based lookup
 
-### 9. `utils/cache.py` (The Cache Manager)
+### 9. `utils/ui_enhancements.py` (The Display Manager)
+*   **Role**: Handles all terminal UI formatting and colors.
+*   **Components**:
+    *   **Colors Enum**: ANSI color codes including standard, light, and special colors (Orange)
+    *   **MessageFormatter**: Formats user messages (Light Blue), bot responses (Green), system messages, and logs
+    *   **Response Sources**: Displays `[LOCAL]`, `[GEMINI]`, `[CACHED]`, `[MATH]` in gray before responses
+*   **Features**:
+    *   Color-coded logging (timestamp and [INFO] in color, messages in gray)
+    *   Clean single-line message formatting
+    *   Fire-effect ASCII banner with yellow → orange → red gradient
+    *   No animation clashing, simple and professional output
+
+### 10. `utils/cache.py` (The Cache Manager)
 *   **Role**: LRU cache for responses with TTL expiration.
 *   **Features**:
     *   Thread-safe operations using `threading.Lock`

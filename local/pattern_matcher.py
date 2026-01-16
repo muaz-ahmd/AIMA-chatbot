@@ -21,11 +21,12 @@ class MatchResult:
 class PatternMatcher:
     """Advanced pattern matching engine"""
     
-    def __init__(self, config: ChatbotConfig, patterns_file: str):
+    def __init__(self, config: ChatbotConfig, patterns_file: str, parser=None):
         self.config = config
         self.patterns = self._load_patterns(patterns_file)
         self.knowledge_base = self._load_knowledge_base()
         self.match_cache = {}
+        self.parser = parser
 
     def load_patterns(self):
         """Reload patterns from file"""
@@ -202,6 +203,13 @@ class PatternMatcher:
              self.match_cache[text] = result
              return result
 
+        # Try Tag-Based Semantic Matching (New)
+        if self.parser:
+            tag_result = self._tag_match(text)
+            if tag_result.matched:
+                self.match_cache[text] = tag_result
+                return tag_result
+
         # Try fuzzy matching if enabled
         if self.config.use_fuzzy_matching:
             fuzzy_result = self._fuzzy_match(text)
@@ -223,7 +231,13 @@ class PatternMatcher:
             for pattern in data.get("patterns", []):
                 if not self._is_regex_pattern(pattern):
                     score = fuzz.partial_ratio(text, pattern.lower())
-                    if score > best_score and score >= self.config.fuzzy_match_threshold:
+                    
+                    # Use lower threshold for learned patterns
+                    threshold = self.config.fuzzy_match_threshold
+                    if name.startswith("learned_"):
+                        threshold = min(threshold, 60) # Lower for learned
+                        
+                    if score > best_score and score >= threshold:
                         best_score = score
                         best_match = (name, data)
         
@@ -236,6 +250,72 @@ class PatternMatcher:
                 match_type="fuzzy"
             )
         
+        return MatchResult(False, None, "", 0.0, "none")
+
+    def _tag_match(self, text: str) -> MatchResult:
+        """Match based on semantic tags rather than full text"""
+        if not self.parser:
+            return MatchResult(False, None, "", 0.0, "none")
+            
+        # Get tags from input
+        input_normalized = self.parser.normalize_for_pattern(text)
+        input_tags = set(input_normalized.split())
+        
+        if not input_tags:
+            return MatchResult(False, None, "", 0.0, "none")
+            
+        best_score = 0
+        best_match = None
+        
+        for name, data in self.patterns.items():
+            # Get tags from pattern data
+            pattern_tags = data.get("tags")
+            if not pattern_tags:
+                # Fallback: create tags from normalized if available
+                norm = data.get("normalized")
+                if norm:
+                    pattern_tags = norm.split()
+            
+            if not pattern_tags:
+                continue
+                
+            pattern_tags_set = set(pattern_tags)
+            
+            # Calculate Jaccard similarity (Intersection over Union)
+            intersection = input_tags & pattern_tags_set
+            union = input_tags | pattern_tags_set
+            
+            if not union:
+                continue
+                
+            score = len(intersection) / len(union)
+            
+            # Weighted score: count matches relative to pattern tags
+            # We want "linux distro" to match "linux distro best" well
+            recall = len(intersection) / len(pattern_tags_set)
+            
+            # Combined score
+            final_score = (score * 0.4) + (recall * 0.6)
+            
+            if final_score > best_score:
+                best_score = final_score
+                best_match = (name, data)
+        
+        # Dynamic threshold for semantic matching
+        base_threshold = 0.7
+        best_name = best_match[0] if best_match else ""
+        if best_name.startswith("learned_"):
+            base_threshold = 0.6 # Lower for learned
+            
+        if best_match and best_score >= base_threshold:
+            return MatchResult(
+                matched=True,
+                response=self._select_response(best_match[1]["responses"]),
+                pattern_name=best_match[0],
+                confidence=best_score,
+                match_type="semantic"
+            )
+            
         return MatchResult(False, None, "", 0.0, "none")
     
     def _select_response(self, responses: List[str]) -> str:

@@ -19,6 +19,8 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
 *   **Long-Term User Memory**: Remembers facts about you across sessions (e.g., "My name is X") in user-specific profiles.
 *   **Google Gemini 2.5 Integration**: Powered by the latest `gemini-2.5-flash` model for high-speed, cost-effective intelligence.
 *   **CLI-First Design**: A professional command-line interface with ASCII art, clean formatting, and line-wrapping for optimal readability.
+*   **Enhanced UI with Color Coding**: Color-coded messages for better visual distinction (Light Blue user input, Green bot responses, Gray source indicators).
+*   **Fire-Effect Banner**: Stylized ASCII art banner with gradient colors from yellow to orange to red for visual appeal.
 *   **Concise Responses**: Tuned to provide direct, no-fluff answers without unnecessary markdown or filler text.
 *   **Extensive Configuration**: Fully customizable behavior via `config.py`.
 *   **Robust Error Handling**: Auto-detects supported SDK versions and manages API connectivity issues gracefully.
@@ -101,6 +103,13 @@ The Google Gemini service is overloaded. Wait a moment and try again, or switch 
 If the bot keeps returning the same error (e.g., "quota exceeded"), clear the cache by running the `clear` command or restart the bot.
 
 ## 📝 Recent Updates
+
+### UI Enhancements
+- **Color-Coded Messages**: Light Blue user input, Green bot responses, Gray source indicators
+- **Response Source Display**: Shows `[LOCAL]`, `[GEMINI]`, `[CACHED]`, or `[MATH]` before responses
+- **Fire-Effect Banner**: ASCII art with gradient colors (yellow → orange → red)
+- **Improved Logging**: Timestamp and [INFO] in color, messages in gray
+- **Clean Output**: No animation clashing, simple single-line message format
 
 ### Bug Fixes
 - Fixed import crashes when `google-genai` SDK is missing

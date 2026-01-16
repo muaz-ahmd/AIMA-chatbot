@@ -6,7 +6,14 @@
     "responses": [
       "I can solve math expressions! Try:\n- Direct: 2 + 2, 10 * 5, 100 / 4, 2^8\n- Natural: solve 15 * 3, what is 50 - 25, calculate 2^10"
     ],
-    "priority": 5
+    "priority": 5,
+    "normalized": "calculate help how math",
+    "tags": [
+      "calculate",
+      "help",
+      "how",
+      "math"
+    ]
   },
   "greetings": {
     "patterns": [
@@ -21,7 +28,20 @@
       "Hey! How's it going?",
       "Greetings! What brings you here?"
     ],
-    "priority": 10
+    "priority": 10,
+    "normalized": "afternoon evening good greetings hello hey hi hola howdy morning",
+    "tags": [
+      "afternoon",
+      "evening",
+      "good",
+      "greetings",
+      "hello",
+      "hey",
+      "hi",
+      "hola",
+      "howdy",
+      "morning"
+    ]
   },
   "farewell": {
     "patterns": [
@@ -33,7 +53,16 @@
       "Bye! Come back anytime!",
       "Farewell! It was nice chatting with you!"
     ],
-    "priority": 10
+    "priority": 10,
+    "normalized": "bye care farewell goodbye see take",
+    "tags": [
+      "bye",
+      "care",
+      "farewell",
+      "goodbye",
+      "see",
+      "take"
+    ]
   },
   "gratitude": {
     "patterns": [
@@ -46,7 +75,15 @@
       "Glad I could assist!",
       "My pleasure!"
     ],
-    "priority": 8
+    "priority": 8,
+    "normalized": "appreciate grateful thank thanks thx",
+    "tags": [
+      "appreciate",
+      "grateful",
+      "thank",
+      "thanks",
+      "thx"
+    ]
   },
   "status": {
     "patterns": [
@@ -58,7 +95,16 @@
       "All systems operational! What can I do for you?",
       "Doing well, thanks for asking!"
     ],
-    "priority": 7
+    "priority": 7,
+    "normalized": "going how hows up wassup whats",
+    "tags": [
+      "going",
+      "how",
+      "hows",
+      "up",
+      "wassup",
+      "whats"
+    ]
   },
   "confusion": {
     "patterns": [
@@ -71,7 +117,22 @@
       "Alright, let's rewind and explain this from the basics.",
       "Got it. I'll explain it in a simpler way."
     ],
-    "priority": 7
+    "priority": 7,
+    "normalized": "again am confused confusing doesnt dont explain im lost make sense understand",
+    "tags": [
+      "again",
+      "am",
+      "confused",
+      "confusing",
+      "doesnt",
+      "dont",
+      "explain",
+      "im",
+      "lost",
+      "make",
+      "sense",
+      "understand"
+    ]
   },
   "clarification_request": {
     "patterns": [
@@ -82,7 +143,15 @@
       "Let me clarify that point more precisely.",
       "Good catch. Here's a clearer explanation."
     ],
-    "priority": 6
+    "priority": 6,
+    "normalized": "clarify mean more specific what",
+    "tags": [
+      "clarify",
+      "mean",
+      "more",
+      "specific",
+      "what"
+    ]
   },
   "thinking_pause": {
     "patterns": [
@@ -93,7 +162,16 @@
       "No rush. I'm here when you're ready.",
       "Paused. Continue when ready."
     ],
-    "priority": 4
+    "priority": 4,
+    "normalized": "give hold moment one second wait",
+    "tags": [
+      "give",
+      "hold",
+      "moment",
+      "one",
+      "second",
+      "wait"
+    ]
   },
   "decision_support": {
     "patterns": [
@@ -105,7 +183,19 @@
       "Tell me the choices and your priority \u00e2\u20ac\u201d speed, cost, or simplicity.",
       "We can weigh pros and cons step by step."
     ],
-    "priority": 8
+    "priority": 8,
+    "normalized": "better cant choose compare decide help options what which",
+    "tags": [
+      "better",
+      "cant",
+      "choose",
+      "compare",
+      "decide",
+      "help",
+      "options",
+      "what",
+      "which"
+    ]
   },
   "learning_mode": {
     "patterns": [
@@ -116,7 +206,16 @@
       "We'll start from fundamentals and move upward.",
       "Learning mode on. Basics first, complexity later."
     ],
-    "priority": 8
+    "priority": 8,
+    "normalized": "explain learn scratch step teach want",
+    "tags": [
+      "explain",
+      "learn",
+      "scratch",
+      "step",
+      "teach",
+      "want"
+    ]
   },
   "example_request": {
     "patterns": [
@@ -127,7 +226,13 @@
       "An example will make this clearer. Let's look at one.",
       "I'll demonstrate with a simple example."
     ],
-    "priority": 7
+    "priority": 7,
+    "normalized": "example give show",
+    "tags": [
+      "example",
+      "give",
+      "show"
+    ]
   },
   "definition_request": {
     "patterns": [
@@ -138,7 +243,15 @@
       "Let me define that precisely.",
       "In short, it means this."
     ],
-    "priority": 7
+    "priority": 7,
+    "normalized": "define definition meaning meant what",
+    "tags": [
+      "define",
+      "definition",
+      "meaning",
+      "meant",
+      "what"
+    ]
   },
   "step_by_step": {
     "patterns": [
@@ -149,7 +262,16 @@
       "We'll go sequentially, no skipping steps.",
       "Let's do this one step at a time."
     ],
-    "priority": 7
+    "priority": 7,
+    "normalized": "one only procedure step steps time",
+    "tags": [
+      "one",
+      "only",
+      "procedure",
+      "step",
+      "steps",
+      "time"
+    ]
   },
   "summarization": {
     "patterns": [
@@ -160,7 +282,15 @@
       "I'll condense this to the key points.",
       "Summary coming up."
     ],
-    "priority": 6
+    "priority": 6,
+    "normalized": "short summarize summary tldr version",
+    "tags": [
+      "short",
+      "summarize",
+      "summary",
+      "tldr",
+      "version"
+    ]
   },
   "depth_control": {
     "patterns": [
@@ -171,7 +301,17 @@
       "Let's dig into the underlying mechanics.",
       "We'll go beneath the surface now."
     ],
-    "priority": 6
+    "priority": 6,
+    "normalized": "deeper depth detail explanation go more technical",
+    "tags": [
+      "deeper",
+      "depth",
+      "detail",
+      "explanation",
+      "go",
+      "more",
+      "technical"
+    ]
   },
   "error_acknowledgement": {
     "patterns": [
@@ -182,7 +322,14 @@
       "You're right to question that. Here's the corrected version.",
       "Good catch. Let's fix it properly."
     ],
-    "priority": 6
+    "priority": 6,
+    "normalized": "incorrect mistake thats wrong",
+    "tags": [
+      "incorrect",
+      "mistake",
+      "thats",
+      "wrong"
+    ]
   },
   "confidence_check": {
     "patterns": [
@@ -193,7 +340,14 @@
       "This is accurate to the best of current knowledge.",
       "If you'd like, we can verify it from first principles."
     ],
-    "priority": 6
+    "priority": 6,
+    "normalized": "correct reliable sure trust",
+    "tags": [
+      "correct",
+      "reliable",
+      "sure",
+      "trust"
+    ]
   },
   "task_completion": {
     "patterns": [
@@ -204,7 +358,15 @@
       "Done. Let me know what you'd like to tackle next.",
       "Completion acknowledged."
     ],
-    "priority": 5
+    "priority": 5,
+    "normalized": "all completed done finished thats",
+    "tags": [
+      "all",
+      "completed",
+      "done",
+      "finished",
+      "thats"
+    ]
   },
   "user_focus": {
     "patterns": [
@@ -215,7 +377,14 @@
       "I'll keep that in mind as we continue.",
       "Acknowledged."
     ],
-    "priority": 5
+    "priority": 5,
+    "normalized": "keep mind note remember",
+    "tags": [
+      "keep",
+      "mind",
+      "note",
+      "remember"
+    ]
   },
   "intent_switch": {
     "patterns": [
@@ -226,7 +395,16 @@
       "Topic switched. What's next?",
       "We can reset and start fresh."
     ],
-    "priority": 5
+    "priority": 5,
+    "normalized": "change different new question switch topic",
+    "tags": [
+      "change",
+      "different",
+      "new",
+      "question",
+      "switch",
+      "topic"
+    ]
   },
   "learned": {
     "patterns": [
@@ -235,25 +413,13 @@
     "responses": [
       "Allah"
     ],
-    "priority": 5
-  },
-  "learned_fdc76e01": {
-    "patterns": [
-      "\\bWho\\ is\\ God\\b"
+    "priority": 5,
+    "normalized": "god who",
+    "tags": [
+      "god",
+      "who"
     ],
-    "responses": [
-      "Allah"
-    ],
-    "priority": 9
-  },
-  "learned_293742ad": {
-    "patterns": [
-      "\\bWho\\ is\\ God\\b"
-    ],
-    "responses": [
-      "Allah"
-    ],
-    "priority": 9
+    "original_query": "Who is God"
   },
   "learned_4c64ffba": {
     "patterns": [
@@ -262,7 +428,13 @@
     "responses": [
       "The Lord of the Universe"
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "allah who",
+    "tags": [
+      "allah",
+      "who"
+    ],
+    "original_query": "Who is Allah"
   },
   "learned_0abc09f7": {
     "patterns": [
@@ -271,7 +443,15 @@
     "responses": [
       "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait."
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "happening india today whats",
+    "tags": [
+      "happening",
+      "india",
+      "today",
+      "whats"
+    ],
+    "original_query": "Whats happening in india today"
   },
   "learned_2efb4738": {
     "patterns": [
@@ -280,7 +460,14 @@
     "responses": [
       "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait."
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "going venezuela whats",
+    "tags": [
+      "going",
+      "venezuela",
+      "whats"
+    ],
+    "original_query": "Whats going on in Venezuela"
   },
   "learned_da30e9a8": {
     "patterns": [
@@ -289,7 +476,15 @@
     "responses": [
       "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar"
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "aima chatbot owns who",
+    "tags": [
+      "aima",
+      "chatbot",
+      "owns",
+      "who"
+    ],
+    "original_query": "Who owns AIMA Chatbot"
   },
   "learned_e0667cf5": {
     "patterns": [
@@ -298,7 +493,13 @@
     "responses": [
       "Hello John"
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "john name",
+    "tags": [
+      "john",
+      "name"
+    ],
+    "original_query": "My name is John"
   },
   "learned_675e3453": {
     "patterns": [
@@ -307,16 +508,31 @@
     "responses": [
       "Hello, Muaz! How can I help?"
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "helo",
+    "tags": [
+      "helo"
+    ],
+    "original_query": "helo"
   },
   "learned_cab8b7df": {
     "patterns": [
       "\\bwhich\\ AI\\ API\\ is\\ the\\ best\\ for\\ reasoning\\b"
     ],
     "responses": [
-      "The \"best\" AI API for reasoning\ndepends on your specific use case.\n\nTop choices often include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nConsider cost, context window size,\nand benchmark performance for your tasks."
+      "The \"best\" AI API for reasoning\ndepends on your specific use case.\n\nTop choices often include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nConsider cost, context window size,\nand benchmark performance for your tasks.",
+      "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks."
     ],
-    "priority": 9
+    "priority": 9,
+    "normalized": "ai api best reasoning which",
+    "tags": [
+      "ai",
+      "api",
+      "best",
+      "reasoning",
+      "which"
+    ],
+    "original_query": "which AI API is the best for reasoning"
   },
   "learned_3651226a": {
     "patterns": [
@@ -325,16 +541,23 @@
     "responses": [
       "Electronics Engineering offers\ndiverse career opportunities.\n\nHardware Design Engineer\nEmbedded Systems Engineer\nVLSI Design Engineer\nTelecommunication Engineer\nNetwork Engineer\nRF Engineer\nControl Systems Engineer\nRobotics Engineer\nAutomation Engineer\nIoT Developer\nResearch & Development\nTechnical Sales Engineer\nField Service Engineer"
     ],
-    "priority": 9
-  },
-  "learned_0f54a6d4": {
-    "patterns": [
-      "\\bwhat\\ is\\ the\\ best\\ api\\ for\\ reasoning\\b"
+    "priority": 9,
+    "normalized": "available btech career domain electronics im islamia jamia millia opportunities student what",
+    "tags": [
+      "available",
+      "btech",
+      "career",
+      "domain",
+      "electronics",
+      "im",
+      "islamia",
+      "jamia",
+      "millia",
+      "opportunities",
+      "student",
+      "what"
     ],
-    "responses": [
-      "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks."
-    ],
-    "priority": 9
+    "original_query": "So im a BTech Electronics Student at Jamia Millia Islamia what are the career opportunities available in this domain"
   },
   "learned_e6d3f729": {
     "patterns": [
@@ -343,6 +566,148 @@
     "responses": [
       "An API key is a unique\nidentifier. It authenticates\na user, developer, or program\nto an API. It grants access\nto specific services and\ntracks usage."
     ],
+    "priority": 9,
+    "normalized": "api key what",
+    "tags": [
+      "api",
+      "key",
+      "what"
+    ],
+    "original_query": "what is an API key"
+  },
+  "learned_a37260b5": {
+    "patterns": [
+      "\\bwhats\\ the\\ best\\ linux\\ distro\\b"
+    ],
+    "responses": [
+      "Hi there! What can I do for you?",
+      "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+      "No single best Linux distro.\nIt depends on your specific needs.\nUbuntu is good for beginners.\nDebian offers stability.\nFedora provides latest tech.\nArch Linux for experienced users."
+    ],
+    "priority": 9,
+    "normalized": "best distro linux whats",
+    "tags": [
+      "best",
+      "distro",
+      "linux",
+      "whats"
+    ],
+    "original_query": "whats the best linux distro"
+  },
+  "learned_linux_def": {
+    "patterns": [
+      "\\bwhat\\ is\\ linux\\b"
+    ],
+    "responses": [
+      "Linux is an open-source\noperating system kernel.\nIt powers many operating systems,\nknown as Linux distributions.\nUsed widely in servers, desktops,\nsmartphones (Android), and\nembedded systems."
+    ],
+    "priority": 9,
+    "normalized": "linux what",
+    "tags": [
+      "linux",
+      "what"
+    ],
+    "original_query": "what is linux"
+  },
+  "learned_7e5096e0": {
+    "patterns": [
+      "\\bai.*who.*father\\b"
+    ],
+    "responses": [
+      "I am an AI assistant.\nI do not have a father."
+    ],
+    "tags": [
+      "ai",
+      "father",
+      "who"
+    ],
+    "normalized": "ai father who",
+    "original_query": "ai, who is your father",
+    "priority": 9
+  },
+  "learned_816c7945": {
+    "patterns": [
+      "\\bbtech.*career.*opportunities.*available.*electronics.*student\\b"
+    ],
+    "responses": [
+      "Electronics Engineer\nEmbedded Systems Dev\nVLSI Design Engineer\nTelecommunications Eng\nPower Electronics Eng\nControl Systems Eng\nIoT Solutions Dev\nRobotics Engineer\nR&D Engineer\nHardware Design Eng"
+    ],
+    "tags": [
+      "btech",
+      "career",
+      "opportunities",
+      "available",
+      "electronics",
+      "student"
+    ],
+    "normalized": "btech career opportunities available electronics student",
+    "original_query": "btech career opportunities available for electronics student",
+    "priority": 9
+  },
+  "learned_b4e9fbbd": {
+    "patterns": [
+      "\\bwhats.*ieee\\b"
+    ],
+    "responses": [
+      "IEEE is the Institute of Electrical and Electronics\nEngineers.\nIt is a professional organization dedicated to\nadvancing technology.\nIt develops standards and promotes\nresearch in electrical engineering,\ncomputer science, and related fields."
+    ],
+    "tags": [
+      "whats",
+      "ieee"
+    ],
+    "normalized": "whats ieee",
+    "original_query": "Whats IEEE",
+    "priority": 9
+  },
+  "learned_b6a79f97": {
+    "patterns": [
+      "\\bwhat.*fundamental.*message.*islam\\b"
+    ],
+    "responses": [
+      "The fundamental message of Islam is the\noneness of God (Allah) and submission to\nHis will. It emphasizes monotheism,\nprophethood, and accountability for actions\non the Day of Judgment. It calls for living\na righteous life in accordance with God's\nguidance."
+    ],
+    "tags": [
+      "what",
+      "fundamental",
+      "message",
+      "islam"
+    ],
+    "normalized": "what fundamental message islam",
+    "original_query": "What is the fundamental message of islam",
+    "priority": 9
+  },
+  "learned_fecf48d3": {
+    "patterns": [
+      "\\bim.*good\\b"
+    ],
+    "responses": [
+      "Glad to hear that, Muaz."
+    ],
+    "tags": [
+      "im",
+      "good"
+    ],
+    "normalized": "im good",
+    "original_query": "Im good",
+    "priority": 9
+  },
+  "learned_c2b062ee": {
+    "patterns": [
+      "\\bwhats.*most.*ideal.*pc.*specs.*2026\\b"
+    ],
+    "responses": [
+      "Predicting exact ideal PC specs for 2026 is difficult.\nTechnology evolves rapidly.\nHowever, a top-tier system will likely feature:\nNext-gen high-core count CPU (16-24+ cores)\nFlagship next-gen GPU (24-48GB+ VRAM)\n64GB to 128GB DDR5/DDR6 RAM\n4TB+ NVMe PCIe Gen 5/6 SSD storage\nHigh-efficiency 1000W+ PSU\nAdvanced liquid cooling"
+    ],
+    "tags": [
+      "whats",
+      "most",
+      "ideal",
+      "pc",
+      "specs",
+      "2026"
+    ],
+    "normalized": "whats most ideal pc specs 2026",
+    "original_query": "whats the most ideal pc specs in 2026",
     "priority": 9
   }
 }

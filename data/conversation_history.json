@@ -1,263 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T01:50:13.470677",
-    "user": "When was JMI founded",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:50:32.504236",
-    "user": "When was Jamia Millia Islamia founded",
-    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:52:49.715097",
-    "user": "Who owns AIMA Chatbot",
-    "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T01:53:10.232484",
-    "user": "Who is the owner of AIMA Chatbot",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:53:20.059556",
-    "user": "Who owns AIMA",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T01:54:05.530293",
-    "user": "Who owns AIMA",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T12:33:42.762587",
-    "user": "Hey",
-    "bot": "Hi there! What can I do for you?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T12:33:53.558035",
-    "user": "How are you",
-    "bot": "All systems operational! What can I do for you?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T12:34:09.224534",
-    "user": "Help me",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T12:34:20.074765",
-    "user": "Who is Allah",
-    "bot": "The Lord of the Universe",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T12:34:41.170353",
-    "user": "When was Jamia Millia Islamia established",
-    "bot": "Jamia Millia Islamia was established with the goal of providing a national (millia) university and promoting education for social upliftment, emphasizing secular and inclusive education.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T12:35:08.618784",
-    "user": "Who founded Jamia Millia Islamia",
-    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T12:35:28.016874",
-    "user": "Who is Muhammed",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:05:49.039338",
-    "user": "Hey",
-    "bot": "Hi there! What can I do for you?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:06:01.074506",
-    "user": "Whats up",
-    "bot": "Doing well, thanks for asking!",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:06:09.728112",
-    "user": "Hows the day",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:06:27.851334",
-    "user": "Who are you?",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:06:38.846846",
-    "user": "I am Muaz",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:06:46.462403",
-    "user": "Hello!",
-    "bot": "Hey! How's it going?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:07:01.966680",
-    "user": "Where is Jamia Millia Islamia",
-    "bot": "The Vice Chancellor of Jamia Millia Islamia is the President of India; the university has a Chancellor and Vice-Chancellor as per statutory structure (these posts have changed holders over time). The current VC is Prof. Mazhar Asif.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:07:29.722931",
-    "user": "Who is God",
-    "bot": "Allah",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:07:35.799035",
-    "user": "Who is God?",
-    "bot": "Allah",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:07:52.403223",
-    "user": "Who is Allah??",
-    "bot": "The Lord of the Universe",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:40:51.408906",
-    "user": "Hello, whats up",
-    "bot": "Hello! How can I help you today?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:41:01.667715",
-    "user": "Hi, help me",
-    "bot": "Greetings! What brings you here?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:41:12.069459",
-    "user": "help me",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:41:25.532602",
-    "user": "My name is Muaz",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T14:42:07.313783",
-    "user": "Whats up",
-    "bot": "Doing well, thanks for asking!",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T14:42:14.873898",
-    "user": "Great",
-    "bot": "\u26a0\ufe0f [API Limit] You're sending requests too fast or have hit your daily quota. Please wait.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T15:26:28.618600",
-    "user": "Who owns aima chatbot",
-    "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T16:47:12.970360",
-    "user": "hey! how are you",
-    "bot": "Hey! How's it going? I'm here and ready to help!",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T16:51:08.460031",
-    "user": "Hello! help",
-    "bot": "Hi there! What can I do for you?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T16:51:21.497598",
-    "user": "Hello! Thanks!",
-    "bot": "Greetings! What brings you here? Glad I could assist!",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T17:04:24.953621",
-    "user": "hello man! how are you",
-    "bot": "Greetings! What brings you here? I'm doing great! How about you?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T17:21:03.812340",
-    "user": "helo",
-    "bot": "Hello, Muaz! How can I help?",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T17:22:21.211168",
-    "user": "which AI API is the best for reasoning",
-    "bot": "The \"best\" AI API for reasoning\ndepends on your specific use case.\n\nTop choices often include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nConsider cost, context window size,\nand benchmark performance for your tasks.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T17:23:32.484297",
-    "user": "when was Jamia Millia Islamia Established",
-    "bot": "Jamia Millia Islamia was established with the goal of providing a national (millia) university and promoting education for social upliftment, emphasizing secular and inclusive education.",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T17:26:30.598900",
-    "user": "Hey! So im a BTech Electronics Student at Jamia Millia Islamia what are the career opportunities available in this domain",
-    "bot": "Hello! How can I help you today?",
-    "source": "LOCAL"
-  },
-  {
-    "timestamp": "2026-01-15T17:26:51.976911",
-    "user": "So im a BTech Electronics Student at Jamia Millia Islamia what are the career opportunities available in this domain",
-    "bot": "Electronics Engineering offers\ndiverse career opportunities.\n\nHardware Design Engineer\nEmbedded Systems Engineer\nVLSI Design Engineer\nTelecommunication Engineer\nNetwork Engineer\nRF Engineer\nControl Systems Engineer\nRobotics Engineer\nAutomation Engineer\nIoT Developer\nResearch & Development\nTechnical Sales Engineer\nField Service Engineer",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T17:29:38.827974",
-    "user": "what is the best api for reasoning",
-    "bot": "The best AI API for reasoning\ndepends on your specific needs.\n\nLeading options include:\nOpenAI (GPT-4, GPT-4o)\nAnthropic (Claude 3 Opus, Sonnet)\nGoogle (Gemini 1.5 Pro)\nMistral AI (Mistral Large)\n\nEvaluate based on cost, context size,\nand performance for your tasks.",
-    "source": "GEMINI"
-  },
-  {
-    "timestamp": "2026-01-15T17:35:22.874163",
-    "user": "1+5",
-    "bot": "1+5 = 6",
-    "source": "MATH"
-  },
-  {
-    "timestamp": "2026-01-15T17:35:44.263429",
-    "user": "21*3+4",
-    "bot": "21*3+4 = 67",
-    "source": "MATH"
-  },
-  {
-    "timestamp": "2026-01-15T17:37:43.139476",
-    "user": "calculate 31*3+21*2+11*1",
-    "bot": "I can solve basic math! Just type an expression like: 2 + 2, 10 * 5, 100 / 4, or 2^8",
-    "source": "LOCAL"
-  },
-  {
     "timestamp": "2026-01-15T17:37:55.432855",
     "user": "31*3+21*2+11*1",
     "bot": "31*3+21*2+11*1 = 146",
@@ -298,5 +40,263 @@
     "user": "how much is 50 - 25",
     "bot": "50 - 25 = 25",
     "source": "MATH"
+  },
+  {
+    "timestamp": "2026-01-15T21:52:33.496916",
+    "user": "hey! what is 2+7",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:53:15.034083",
+    "user": "hey! whats the best linux distro",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:53:28.914993",
+    "user": "whats the best linux distro",
+    "bot": "Hi there! What can I do for you?",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T21:53:40.414294",
+    "user": "whats the best linux distro mate",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:54:05.657449",
+    "user": "which linux distro is best",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T21:54:40.899052",
+    "user": "who is god",
+    "bot": "Allah",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:54:45.417936",
+    "user": "who is allah",
+    "bot": "The Lord of the Universe",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:55:07.900280",
+    "user": "which linux distro is the best",
+    "bot": "\u26a0\ufe0f [Server Busy] Google's AI service is overloaded right now. Please try again in a minute.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T21:55:33.497252",
+    "user": "which linux distro is the best",
+    "bot": "\u26a0\ufe0f [Server Busy] Google's AI service is overloaded right now. Please try again in a minute.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T21:56:05.704161",
+    "user": "which linux distro is best",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T21:56:21.952430",
+    "user": "which linux distro is the best",
+    "bot": "No single best Linux distro.\nIt depends on your specific needs.\nUbuntu is good for beginners.\nDebian offers stability.\nFedora provides latest tech.\nArch Linux for experienced users.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T21:56:45.947838",
+    "user": "who owns aima chatbot",
+    "bot": "AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T22:22:09.440206",
+    "user": "which linux distro is the best",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T22:22:24.964861",
+    "user": "what is the best linux distro",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T22:23:33.720606",
+    "user": "ai, who is your father",
+    "bot": "I am an AI assistant.\nI do not have a father.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T22:35:47.446080",
+    "user": "best linux distro",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T22:36:01.438456",
+    "user": "which linux distro is best",
+    "bot": "No single best Linux distro.\nChoice depends on your needs,\nexperience, and hardware.\nPopular options include Ubuntu\n(user-friendly), Debian (stable),\nFedora (cutting-edge), and Arch\n(minimalist, advanced).",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T22:42:47.245647",
+    "user": "what is linux",
+    "bot": "Linux is an open-source\noperating system kernel.\nIt powers many operating systems,\nknown as Linux distributions.\nUsed widely in servers, desktops,\nsmartphones (Android), and\nembedded systems.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T22:54:54.205810",
+    "user": "hey! what is the best linux distro",
+    "bot": "Greetings! What brings you here? Linux is an open-source\noperating system kernel.\nIt powers many operating systems,\nknown as Linux distributions.\nUsed widely in servers, desktops,\nsmartphones (Android), and\nembedded systems.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T22:59:51.669170",
+    "user": "btech career opportunities available for electronics student",
+    "bot": "Electronics Engineer\nEmbedded Systems Dev\nVLSI Design Engineer\nTelecommunications Eng\nPower Electronics Eng\nControl Systems Eng\nIoT Solutions Dev\nRobotics Engineer\nR&D Engineer\nHardware Design Eng",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-15T23:00:55.238500",
+    "user": "hello! who owns aima chatbot.",
+    "bot": "Hi there! What can I do for you? AIMA was founded by Ammaar Suhail in Jan 2026, Alongside Muaz Ahmed, Ibrahim Kidwai & Mohd. Ashar",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T23:12:28.790257",
+    "user": "who is the vice chancellor of jamia millia islamia",
+    "bot": "The Vice Chancellor of Jamia Millia Islamia is the President of India; the university has a Chancellor and Vice-Chancellor as per statutory structure (these posts have changed holders over time). The current VC is Prof. Mazhar Asif.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T23:12:47.018966",
+    "user": "thanks",
+    "bot": "My pleasure!",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T23:13:47.294458",
+    "user": "note this There is no God but Allah and Muhammed is the messanger of Allah",
+    "bot": "Understood \u00e2\u20ac\u201d noted for this conversation.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-15T23:14:25.984524",
+    "user": "whats up? thanks",
+    "bot": "Doing well, thanks for asking! My pleasure!",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T22:37:48.153919",
+    "user": "Hey",
+    "bot": "Hey! How's it going?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T22:54:33.619445",
+    "user": "Hey",
+    "bot": "Hi there! What can I do for you?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T22:55:04.258480",
+    "user": "When was Jamia Millia Islamia founded",
+    "bot": "Jamia Millia Islamia was founded on 29 October 1920.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T22:56:21.063453",
+    "user": "Hey",
+    "bot": "Hello! How can I help you today?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:02:09.283686",
+    "user": "Whats IEEE",
+    "bot": "IEEE is the Institute of Electrical and Electronics\nEngineers.\nIt is a professional organization dedicated to\nadvancing technology.\nIt develops standards and promotes\nresearch in electrical engineering,\ncomputer science, and related fields.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-16T23:14:24.764513",
+    "user": "Hey",
+    "bot": "Greetings! What brings you here?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:15:48.496570",
+    "user": "whats ieee",
+    "bot": "IEEE is the Institute of Electrical and Electronics\nEngineers.\nIt is a professional organization dedicated to\nadvancing technology.\nIt develops standards and promotes\nresearch in electrical engineering,\ncomputer science, and related fields.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:18:18.895671",
+    "user": "Hey",
+    "bot": "Hey! How's it going?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:18:26.993936",
+    "user": "Whats IEEE",
+    "bot": "IEEE is the Institute of Electrical and Electronics\nEngineers.\nIt is a professional organization dedicated to\nadvancing technology.\nIt develops standards and promotes\nresearch in electrical engineering,\ncomputer science, and related fields.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:19:54.208754",
+    "user": "Who are the top 5 Greatest People",
+    "bot": "Founding figures include Maulana Mahmud Hasan (Shaikhul Hind), Maulana Mohammad Ali Jauhar, Hakim Ajmal Khan, Dr. Mukhtar Ahmad Ansari, and Abdul Majeed Khwaja.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:20:27.977234",
+    "user": "Who is the greatest person to live on earth",
+    "bot": "Admission processes vary by faculty and program (some professional programs use university-specific entrance tests, others use national-level exams or merit-based selection).",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:20:58.444819",
+    "user": "What is the fundamental message of islam",
+    "bot": "The fundamental message of Islam is the\noneness of God (Allah) and submission to\nHis will. It emphasizes monotheism,\nprophethood, and accountability for actions\non the Day of Judgment. It calls for living\na righteous life in accordance with God's\nguidance.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-16T23:30:23.236504",
+    "user": "Hey",
+    "bot": "Hey! How's it going?",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:30:36.113025",
+    "user": "Im good",
+    "bot": "Glad to hear that, Muaz.",
+    "source": "GEMINI"
+  },
+  {
+    "timestamp": "2026-01-16T23:30:46.771939",
+    "user": "Whats up",
+    "bot": "I'm here and ready to help!",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:31:10.057868",
+    "user": "What are the different schools of Aqeedah",
+    "bot": "JMI comprises multiple faculties, including Architecture & Ekistics, Dentistry, Education, Engineering & Technology, Fine Arts, Humanities & Languages, Law, Management Studies, Sciences, Life Sciences, and Social Sciences.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:31:36.376012",
+    "user": "What are the different schools of Aqeedah and how they differ in reasoning",
+    "bot": "JMI comprises multiple faculties, including Architecture & Ekistics, Dentistry, Education, Engineering & Technology, Fine Arts, Humanities & Languages, Law, Management Studies, Sciences, Life Sciences, and Social Sciences.",
+    "source": "LOCAL"
+  },
+  {
+    "timestamp": "2026-01-16T23:32:55.908658",
+    "user": "whats the most ideal pc specs in 2026",
+    "bot": "Predicting exact ideal PC specs for 2026 is difficult.\nTechnology evolves rapidly.\nHowever, a top-tier system will likely feature:\nNext-gen high-core count CPU (16-24+ cores)\nFlagship next-gen GPU (24-48GB+ VRAM)\n64GB to 128GB DDR5/DDR6 RAM\n4TB+ NVMe PCIe Gen 5/6 SSD storage\nHigh-efficiency 1000W+ PSU\nAdvanced liquid cooling",
+    "source": "GEMINI"
   }
 ]

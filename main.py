@@ -1,12 +1,14 @@
 import sys
 import os
 from pathlib import Path
+import threading
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import ChatbotConfig
 from core.chatbot import HybridChatbot
+from utils.ui_enhancements import UIManager, Colors
 
 class ChatbotCLI:
     """Command-line interface for chatbot"""
@@ -14,64 +16,75 @@ class ChatbotCLI:
     def __init__(self, user_override: str = None):
         self.config = ChatbotConfig()
         self.chatbot = HybridChatbot(self.config, user_override=user_override)
+        self.ui = UIManager(enable_colors=self.config.enable_colors)
         self.running = False
     
     def print_banner(self):
-        """Print welcome banner"""
-        banner = """
-    .----------------.  .----------------.  .----------------.  .----------------. 
-   | .--------------. || .--------------. || .--------------. || .--------------. |
-   | |      __      | || |     _____    | || | ____    ____ | || |      __      | |
-   | |     /  \\     | || |    |_   _|   | || ||_   \\  /   _|| || |     /  \\     | |
-   | |    / /\\ \\    | || |      | |     | || |  |   \\/   |  | || |    / /\\ \\    | |
-   | |   / ____ \\   | || |      | |     | || |  | |\\  /| |  | || |   / ____ \\   | |
-   | | _/ /    \\ \\_ | || |     _| |_    | || | _| |_\\/_| |_ | || | _/ /    \\ \\_ | |
-   | ||____|  |____|| || |    |_____|   | || ||_____||_____|| || ||____|  |____|| |
-   | |              | || |              | || |              | || |              | |
-   | '--------------' || '--------------' || '--------------' || '--------------' |
-   '----------------'  '----------------'  '----------------'  '----------------' 
-                            
-                       AIMA ChatBot v1.0
-             Advanced Intelligent Multi-purpose Agent
-    """
-        print(banner)
+        """Print welcome banner with fire effect (yellow top to red bottom)"""
+        banner_lines = [
+            '                  __        __     ___      ___       __      ',
+            '                 /""\      |" \\   |"  \\    /"  |     /""\     ',
+            '                /    \\     ||  |   \\   \\  //   |    /    \\    ',
+            '               /\' /\\  \\    |:  |   /\\   \\/.    |   /\' /\\  \\   ',
+            '              //  __\'  \\   |.  |  |: \\.        |  //  __\'  \\  ',
+            '             /   /  \\\\  \\  /\\  |\\ |.  \\    /:  | /   /  \\\\  \\ ',
+            '            (___/    \\___)(__\\_|_)|___ \\__/|___|(___/    \\___))',
+            '                                                  ',
+            '                          AIMA ChatBot v1.0',
+            '                Advanced Intelligent Multi-purpose Agent'
+        ]
+        
+        # Color mapping: top lines yellow, middle orange/red, bottom red for fire effect
+        colors = [
+            Colors.LIGHT_YELLOW,  # Line 1 - bright yellow
+            Colors.LIGHT_YELLOW,  # Line 2 - bright yellow
+            Colors.YELLOW,        # Line 3 - yellow
+            Colors.ORANGE,        # Line 4 - orange
+            Colors.ORANGE,        # Line 5 - orange
+            Colors.LIGHT_RED,     # Line 6 - light red
+            Colors.RED,           # Line 7 - red
+            Colors.LIGHT_GRAY,    # Line 8 - spacing
+            Colors.LIGHT_YELLOW,  # Line 9 - title in bright yellow
+            Colors.YELLOW         # Line 10 - subtitle in yellow
+        ]
+        
+        print()  # Top spacing
+        for line, color in zip(banner_lines, colors):
+            print(f"{color}{line}{Colors.RESET}")
+        print()  # Bottom spacing
     
     def setup(self):
         """Initial setup"""
-        print("\n" + "="*60)
-        print("SETUP")
-        print("="*60)
+        self.ui.print_banner("SETUP")
         
         # API Key: prefer environment variable if present
         env_api_key = os.environ.get("GEMINI_API_KEY")
         if env_api_key:
-            print("\nUsing GEMINI_API_KEY from environment.")
+            self.ui.print_system_message("Using GEMINI_API_KEY from environment.", "INFO")
             api_key = env_api_key
         else:
             # API Key prompt
-            print("\nGemini API Configuration")
+            print("\n" + "Gemini API Configuration".center(60))
             print("Enter your Gemini API key (or press Enter to use local only):")
             api_key = input("API Key: ").strip()
 
             if not api_key:
-                print("\nNo API key provided. Running in LOCAL-ONLY mode.")
+                self.ui.print_system_message("No API key provided. Running in LOCAL-ONLY mode.", "WARNING")
                 print("Only pattern-matched responses will be available.")
         
         # Initialize chatbot
         print("\nInitializing chatbot...")
         if self.chatbot.initialize(api_key if api_key else None):
-            print("Chatbot initialized successfully.")
+            self.ui.print_system_message("Chatbot initialized successfully.", "SUCCESS")
         else:
-            print("Initialization failed. Starting with limited functionality.")
+            self.ui.print_system_message("Initialization failed. Starting with limited functionality.", "WARNING")
         
-        print("\n" + "="*60)
-        print("READY TO CHAT")
-        print("="*60)
-        print("\nTips:")
-        print(" - Type 'help' for available commands")
-        print(" - Type 'stats' to see usage statistics")
-        print(" - Type 'quit' or 'exit' to end the session")
-        print(" - Press Ctrl+C to force quit")
+        self.ui.print_banner("READY TO CHAT")
+        print(f"\n{Colors.LIGHT_YELLOW}Tips:")
+        print(f"→ Type 'help' for available commands")
+        print(f"→ Type 'stats' to see usage statistics")
+        print(f"→ Type 'quit' or 'exit' to end the session")
+        print(f"→ Press Ctrl+C to force quit{Colors.RESET}")
         print("\n" + "-"*60 + "\n")
     
     def run(self):
@@ -81,7 +94,9 @@ class ChatbotCLI:
         try:
             while self.running:
                 # Get user input
-                user_input = input(f"\n{self.config.prompt_symbol}").strip()
+                print()  # Add spacing
+                user_input = input(f"{Colors.LIGHT_BLUE}You:{Colors.RESET} ").strip()
+                print()  # New line after input
                 
                 if not user_input:
                     continue
@@ -90,24 +105,29 @@ class ChatbotCLI:
                 if self.handle_command(user_input):
                     continue
                 
-                # Show typing indicator
-                if self.config.show_typing_indicator:
-                    print(f"\n{self.config.bot_symbol}", end="", flush=True)
-                    import time
-                    time.sleep(self.config.typing_delay)
-                    print("\r" + " " * 50 + "\r", end="", flush=True)
-                
-                # Get response
+                # Get response (shows typing indicator if enabled, then processes)
                 response = self.chatbot.process_input(user_input)
                 
-                # Display response
-                print(f"{self.config.bot_symbol}{response}")
+                # Extract source if available (format: [SOURCE]response)
+                source = None
+                if response.startswith('[') and ']' in response:
+                    end_bracket = response.index(']')
+                    source = response[1:end_bracket]
+                    response = response[end_bracket+1:].strip()
+                
+                # Display response: source in grey, Bot in green, rest normal
+                if source:
+                    print(f"{Colors.LIGHT_GRAY}[{source}]{Colors.RESET} {Colors.GREEN}Bot:{Colors.RESET} {response}")
+                else:
+                    print(f"{Colors.GREEN}Bot:{Colors.RESET} {response}")
         
         except KeyboardInterrupt:
-            print("\n\nInterrupted by user")
+            print("\n")
+            self.ui.print_system_message("Interrupted by user", "INFO")
             self.shutdown()
         except Exception as e:
-            print(f"\n\nFatal error: {e}")
+            print("\n")
+            self.ui.print_system_message(f"Fatal error: {e}", "ERROR")
             self.shutdown()
     
     def handle_command(self, command: str) -> bool:
@@ -128,7 +148,7 @@ class ChatbotCLI:
         
         elif cmd == 'clear':
             self.chatbot.clear_history()
-            print("Conversation history cleared")
+            self.ui.print_system_message("Conversation history cleared", "SUCCESS")
             return True
         
         elif cmd == 'config':
@@ -146,41 +166,40 @@ class ChatbotCLI:
     
     def show_help(self):
         """Show help information"""
+        self.ui.print_banner("HELP & COMMANDS")
+        print(f"{Colors.LIGHT_YELLOW}")
         help_text = """
-HELP & COMMANDS
-
 Available Commands:
-    help     - Show this help message
-    stats    - Display usage statistics
-    config   - Show current configuration
-    clear    - Clear conversation history
-    quit     - Exit the chatbot
-    exit     - Exit the chatbot
-    train    - Manually teach the bot a new response
-    autolearn [on/off] - Toggle auto-learning from AI
+→ help     - Show this help message
+→ stats    - Display usage statistics
+→ config   - Show current configuration
+→ clear    - Clear conversation history
+→ quit     - Exit the chatbot
+→ exit     - Exit the chatbot
+→ train    - Manually teach the bot a new response
+→ autolearn [on/off] - Toggle auto-learning from AI
 
 Usage:
-    Type your message and press Enter. The chatbot will:
-    1. Check local patterns first (fast responses)
-    2. Fall back to Gemini AI for complex queries
-    3. Show response source: [LOCAL] or [GEMINI]
+Type your message and press Enter. The chatbot will:
+1. Check local patterns first (fast responses)
+2. Fall back to Gemini AI for complex queries
+3. Show response source: [LOCAL] or [GEMINI]
 
 Features:
-    - Conversation history & context
-    - Response caching for speed
-    - Fuzzy pattern matching
-    - Rate limiting protection
-    - Comprehensive logging
-                """
+→ Conversation history & context
+→ Response caching for speed
+→ Fuzzy pattern matching
+→ Rate limiting protection
+→ Comprehensive logging
+        """
         print(help_text)
+        print(f"{Colors.RESET}")
     
     def show_stats(self):
         """Show statistics"""
         stats = self.chatbot.get_statistics()
         
-        print("\n" + "="*60)
-        print("CHATBOT STATISTICS")
-        print("="*60)
+        self.ui.print_banner("CHATBOT STATISTICS")
         print(f"\nSession Stats:")
         print(f"   Total Queries:     {stats['total_queries']}")
         print(f"   Local Responses:   {stats['local_responses']}")
@@ -191,13 +210,10 @@ Features:
         print(f"   Uptime:            {stats['uptime_seconds']:.1f}s")
         print(f"   Cache Size:        {stats['cache_size']} entries")
         print(f"   History Length:    {stats['history_length']} exchanges")
-        print("="*60)
     
     def show_config(self):
         """Show configuration"""
-        print("\n" + "="*60)
-        print("CONFIGURATION")
-        print("="*60)
+        self.ui.print_banner("CONFIGURATION")
         print(f"\nKey Settings:")
         print(f"   Gemini Model:           {self.config.gemini_model}")
         print(f"   Local Priority:         {self.config.enable_local_priority}")
@@ -205,20 +221,17 @@ Features:
         print(f"   Response Cache:         {self.config.enable_response_cache}")
         print(f"   Context Enabled:        {self.config.enable_context}")
         print(f"   Max History:            {self.config.max_history_length}")
-        print(f"   Max History:            {self.config.max_history_length}")
         print(f"   Rate Limit:             {self.config.max_requests_per_minute}/min")
         print(f"   Auto Learning:          {self.config.enable_auto_learning}")
-        print("="*60)
     
     def train_mode(self):
         """Interactive training mode"""
-        print("\n" + "="*60)
-        print("TRAINING MODE")
-        print("="*60)
+        self.ui.print_banner("TRAINING MODE")
         print("Teach the bot a new pattern. Type 'cancel' to exit.")
         
         while True:
-            pattern = input("\n[1] What should I listen for? (Pattern): ").strip()
+            print()
+            pattern = input("[1] What should I listen for? (Pattern): ").strip()
             if pattern.lower() == 'cancel':
                 break
             if not pattern:
@@ -231,12 +244,11 @@ Features:
                 continue
             
             if self.chatbot.learn_pattern(pattern, response):
-                print(f"✓ Learned: '{pattern}' -> '{response}'")
+                self.ui.print_system_message(f"Learned: '{pattern}' -> '{response}'", "SUCCESS")
                 break
             else:
-                print("x Failed to save pattern.")
+                self.ui.print_system_message("Failed to save pattern.", "ERROR")
                 break
-        print("="*60)
 
     def handle_autolearn(self, cmd: str) -> bool:
         """Toggle auto-learning"""
@@ -245,26 +257,24 @@ Features:
             state = parts[1].lower()
             if state in ['on', 'true', '1']:
                 self.config.enable_auto_learning = True
-                print("Auto-learning ENABLED")
+                self.ui.print_system_message("Auto-learning ENABLED", "SUCCESS")
             elif state in ['off', 'false', '0']:
                 self.config.enable_auto_learning = False
-                print("Auto-learning DISABLED")
+                self.ui.print_system_message("Auto-learning DISABLED", "WARNING")
             else:
-                print("Usage: autolearn [on/off]")
+                self.ui.print_system_message("Usage: autolearn [on/off]", "INFO")
         else:
-            print(f"Auto-learning is currently: {'ENABLED' if self.config.enable_auto_learning else 'DISABLED'}")
+            status = 'ENABLED' if self.config.enable_auto_learning else 'DISABLED'
+            self.ui.print_system_message(f"Auto-learning is currently: {status}", "INFO")
         return True
 
     def shutdown(self):
         """Graceful shutdown"""
-        print("\n" + "="*60)
-        print("SHUTTING DOWN")
-        print("="*60)
+        self.ui.print_banner("SHUTTING DOWN")
         
         self.chatbot.shutdown()
         
-        print("\nThanks for chatting. Goodbye!")
-        print("="*60 + "\n")
+        self.ui.print_system_message("Thanks for chatting. Goodbye!", "SUCCESS")
         
         self.running = False
         sys.exit(0)

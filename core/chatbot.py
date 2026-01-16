@@ -24,7 +24,8 @@ class HybridChatbot:
         self.math_solver = MathSolver()
         self.pattern_matcher = PatternMatcher(
             config,
-            config.patterns_file
+            config.patterns_file,
+            parser=self.parser
         )
         self.gemini_client = GeminiClient(config)
         self.logger = ChatbotLogger(config)
@@ -241,22 +242,19 @@ class HybridChatbot:
             return self.config.default_error_response
     
     def learn_pattern(self, pattern: str, response: str) -> bool:
-        """Learn a new pattern and save to file"""
+        """Learn a new pattern and save to file with normalization and duplicate detection"""
         try:
             import json
             import os
             import re
+            from fuzzywuzzy import fuzz
             
-            # Basic sanitization
-            # Escape regex characters if it's treated as a literal string
-            clean_pattern = re.escape(pattern.strip())
+            # Normalize pattern for comparison
+            normalized = self.parser.normalize_for_pattern(pattern.strip())
             
-            # Smart boundary handling
-            # If pattern ends with word char (a-z0-9), use \b. Else use end of string or non-word char check.
-            start_b = r"\b" if re.match(r'^\w', clean_pattern) else ""
-            end_b = r"\b" if re.search(r'\w$', clean_pattern) else ""
-            
-            regex_pattern = f"{start_b}{clean_pattern}{end_b}"
+            if not normalized:
+                self.logger.warning("Pattern normalized to empty string, skipping")
+                return False
             
             # Load existing
             if os.path.exists(self.config.patterns_file):
@@ -264,27 +262,82 @@ class HybridChatbot:
                     data = json.load(f)
             else:
                 data = {}
-
-            # Add to a unique category for proper 1-to-1 mapping
-            # This ensures we don't need a complex logic to manage a single 'learned' array
-            import uuid
-            cat_id = f"learned_{uuid.uuid4().hex[:8]}"
-            data[cat_id] = {
-                "patterns": [regex_pattern],
-                "responses": [response],
-                "priority": 9  # High priority for learned items
-            }
             
-            with open(self.config.patterns_file, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2)
+            # Check for similar existing pattern
+            similar_key = self._find_similar_pattern(normalized, data)
             
-            # Reload matcher
-            self.pattern_matcher.load_patterns()
-            return True
+            if similar_key:
+                # Update existing pattern instead of creating duplicate
+                self.logger.info(f"Merging with similar pattern: {similar_key}")
+                
+                # Add response if not already present
+                existing_responses = data[similar_key].get("responses", [])
+                if response not in existing_responses:
+                    existing_responses.append(response)
+                    data[similar_key]["responses"] = existing_responses
+                    
+                    with open(self.config.patterns_file, 'w', encoding='utf-8') as f:
+                        json.dump(data, f, indent=2)
+                    
+                    self.pattern_matcher.load_patterns()
+                    return True
+                else:
+                    self.logger.info("Response already exists for this pattern")
+                    return False
+            else:
+                # Create new pattern with tags
+                # Extract tags (keywords) from normalized pattern
+                tags = normalized.split()
+                
+                # Create regex pattern that's more flexible
+                # Use word boundaries for each tag
+                tag_patterns = [re.escape(tag) for tag in tags]
+                regex_pattern = r"\b" + r".*".join(tag_patterns) + r"\b"
+                
+                import uuid
+                cat_id = f"learned_{uuid.uuid4().hex[:8]}"
+                data[cat_id] = {
+                    "patterns": [regex_pattern],
+                    "responses": [response],
+                    "tags": tags,  # Store tags for semantic matching
+                    "normalized": normalized,  # Store normalized form
+                    "original_query": pattern.strip(),  # Store original for reference
+                    "priority": 9  # High priority for learned items
+                }
+                
+                with open(self.config.patterns_file, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2)
+                
+                # Reload matcher
+                self.pattern_matcher.load_patterns()
+                self.logger.info(f"Learned new pattern with tags: {tags}")
+                return True
             
         except Exception as e:
             self.logger.error(f"Failed to learn pattern: {e}")
             return False
+    
+    def _find_similar_pattern(self, normalized_pattern: str, patterns_data: dict, threshold: float = 0.85) -> Optional[str]:
+        """Find if a similar pattern already exists using fuzzy matching"""
+        from fuzzywuzzy import fuzz
+        
+        best_score = 0
+        best_match = None
+        
+        for name, data in patterns_data.items():
+            if name.startswith("learned_"):
+                # Compare with normalized form if available
+                existing_normalized = data.get("normalized", "")
+                
+                if existing_normalized:
+                    # Token sort ratio is more robust for deduplication as it respects word count
+                    score = fuzz.token_sort_ratio(normalized_pattern, existing_normalized) / 100.0
+                    
+                    if score >= 0.9 and score > best_score:
+                        best_score = score
+                        best_match = name
+        
+        return best_match if best_score >= 0.9 else None
     
     def _format_response(self, response: str, source: str, match_type: str = "") -> str:
         """Format response with source indicator"""
