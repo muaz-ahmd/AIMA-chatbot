@@ -20,7 +20,6 @@ AIMA ChatBot is a powerful, hybrid conversational agent that combines **local pa
 *   **Google Gemini 2.5 Integration**: Powered by the latest `gemini-2.5-flash` model for high-speed, cost-effective intelligence.
 *   **CLI-First Design**: A professional command-line interface with ASCII art, clean formatting, and line-wrapping for optimal readability.
 *   **Enhanced UI with Color Coding**: Color-coded messages for better visual distinction (Light Blue user input, Green bot responses, Gray source indicators).
-*   **Fire-Effect Banner**: Stylized ASCII art banner with gradient colors from yellow to orange to red for visual appeal.
 *   **Concise Responses**: Tuned to provide direct, no-fluff answers without unnecessary markdown or filler text.
 *   **Extensive Configuration**: Fully customizable behavior via `config.py`.
 *   **Robust Error Handling**: Auto-detects supported SDK versions and manages API connectivity issues gracefully.
